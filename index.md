@@ -1,5 +1,3 @@
-# 🏠 Homepage
-
 ### [💥 GitHub Repositories](https://github.com/vdwulp?tab=repositories)
 All repositories on my GitHub profile.
 
