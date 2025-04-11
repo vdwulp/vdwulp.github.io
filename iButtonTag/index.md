@@ -8,4 +8,4 @@ Arduino library handling iButton identification tags such as DS1990A, TM1990A, R
 
 ### In-depth
 - Complete [reference documentation](reference.md)
-- More information on [iButton Probes](https://vdwulp.github.io/iButtonTag/iButtonProbe.html)
+- More information on [iButton probes](https://vdwulp.github.io/iButtonTag/iButtonProbe.html)
