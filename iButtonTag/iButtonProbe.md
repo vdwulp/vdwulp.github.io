@@ -1,4 +1,4 @@
-# Arduino iButtonTag Library
+# [📚 Arduino iButtonTag Library](https://vdwulp.github.io/iButtonTag)
 
 ## iButton probes
 - iButton probes come in many forms, some have LED-indicator(s) with one or two colors.
@@ -6,7 +6,7 @@
 - iButton probes with two-color LED-indicator usualy have one bi-directional LED that changes color when polarity on two available LED-wires is reversed.
 - On this page are some examples of iButton probes with their wiring and shopping links. Wiring may vary for the model you receive.
 
-## Examples of iButton probes
+## Examples
 
 ### Flat iButton probe with _two color_ indicator LED
 _Looks the same as one color model, see below. Different colors of LED-indicator by reversing polarity._
