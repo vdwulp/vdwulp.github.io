@@ -49,6 +49,7 @@ Indicates the maximum value of an iButton tag type constant. Can be used to dete
 Constructs an iButtonTag object linked to the supplied pin.
 
 **Arguments**
+
 | type | name | description |
 |:-----|:-----|:------------|
 | uint8_t | pin | Arduino pin number this iButtonTag object should be linked to. |
@@ -62,12 +63,14 @@ When multiple iButtons are connected to the OneWire this function will return an
 DS1990 iButton tags can't be used with multiple tags on a single OneWire data line and require special handling. This function facilitates compatibility with the DS1990 iButton Tags when argument _old_ is set to true. However, this reduces compatibility with other iButton tags: DS1990A, DS1990R and TM1990A will still be handled correctly (they offer backwards compatibility), but other OneWire devices (including iButtons) won't and may even show unexpected behaviour.
 
 **Arguments**
+
 | type | name | description |
 |:-----|:-----|:------------|
 | [iButtonCode](#iButtonCode) | code | Variable to store code read from the OneWire. |
 | bool | old | Setting to _true_ enables compatibility with DS1990 iButton tags. Default value is _false_. |
  
 **Returns**
+
 | value | description |
 |:-----:|:------------|
 |  1 | Next iButton read succesfully, code array filled with identifying code |
