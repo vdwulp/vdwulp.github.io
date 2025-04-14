@@ -85,6 +85,7 @@ Starts the search for multiple iButton identifying codes on the OneWire.
 Resets the domain to search for iButton identifying codes. This function is needed to start searching for codes _again_. It's not really needed the first time, though it's good practice to always use it before enumerating codes with the [nextCode](#nextCode) function.
 
 **Returns**
+
 | value | description |
 |:-----:|:------------|
 | 1 | At least one iButton detected, enumerate with [nextCode](#nextCode) function
@@ -99,11 +100,13 @@ Start the search for multiple iButton identyfying codes with the [readCodes](#re
 A return value 0 means searching finished succesfully, but there are no more iButtons on the OneWire. Negative return values indicate a problem during the search (mostly due to movement of the iButton on the reader), but additional calls to the function _may_ yield new iButton identifying codes. However, the overall result will be unreliable.
 
 **Arguments**
+
 | type | name | description |
 |:-----|:-----|:------------|
 | [iButtonCode](#iButtonCode) | code | Variable to store code read from the OneWire. |
 
 **Returns**
+
 | value | description |
 |:-----:|:------------|
 |  1 | Next iButton read succesfully, code array filled with identifying code |
@@ -116,11 +119,13 @@ A return value 0 means searching finished succesfully, but there are no more iBu
 Tests [iButtonCode](#iButtonCode) for validity.
 
 **Arguments**
+
 | type | name | description |
 |:-----|:-----|:------------|
 | [iButtonCode](#iButtonCode) | code | Code to be tested. |
 
 **Returns**
+
 | value | description |
 |:-----:|:------------|
 |  1 | iButton code valid |
@@ -132,12 +137,14 @@ Tests [iButtonCode](#iButtonCode) for validity.
 Tests if two [iButtonCode](#iButtonCode)'s are equal.
 
 **Arguments**
+
 | type | name | description |
 |:-----|:-----|:------------|
 | [iButtonCode](#iButtonCode) | a | First code to be tested. |
 | [iButtonCode](#iButtonCode) | b | Second code to be tested. |
 
 **Returns**
+
 | value | description |
 |:-----:|:------------|
 | true  | The two [iButtonCode](#iButtonCode)'s are equal |
@@ -150,6 +157,7 @@ Prints [iButtonCode](#iButtonCode) to Serial as hexadecimal byte values.
 Serial must be initialised in the main code first. By default the bytes are printed as received from the iButton (reverse = false). The order can be reversed (reverse = true) to match the sequence fysically engraved on many iButtons.
 
 **Arguments**
+
 | type | name | description |
 |:-----|:-----|:------------|
 | [iButtonCode](#iButtonCode) | code | The code to be printed. |
@@ -160,6 +168,7 @@ Serial must be initialised in the main code first. By default the bytes are prin
 Updates checksum of [iButtonCode](#iButtonCode) to a correct value.
 
 **Arguments**
+
 | type | name | description |
 |:-----|:-----|:------------|
 | [iButtonCode](#iButtonCode) | code | The code to be updated. |
@@ -176,6 +185,7 @@ A return value of iButton (re)writable type constant [IBUTTON_UNKNOWN](#IBUTTON_
 - iButton tag _is_ of a (re)writable type supported by this library. However, this specific type _is not_ detectable, like types indicated by [IBUTTON_TM01](#IBUTTON_TM01).
 
 **Returns**
+
 | value | description |
 |:-----:|:------------|
 | \>0 | iButton writable type found as indicated by type constant |
@@ -194,6 +204,7 @@ Strong recommendations, please read carefully:
 This function supports writing a new iButton identification code to tag models RW1990, RW1990.1, ТM08, ТM08v2 (type [IBUTTON_RW1990V1](#IBUTTON_RW1990V1)), RW1990v2, RW1990.2 (type [IBUTTON_RW1990V2](#IBUTTON_RW1990V2)), RW2004, TM2004 (type [IBUTTON_RW2004](#IBUTTON_RW2004)), TM01 and TM01C (type [IBUTTON_TM01](#IBUTTON_TM01)).
 
 **Arguments**
+
 | type | name | description |
 |:-----|:-----|:------------|
 | [iButtonCode](#iButtonCode) | code | Code to be written. |
@@ -201,6 +212,7 @@ This function supports writing a new iButton identification code to tag models R
 | bool | check | Setting to _false_ disables most checking done before trying to write. Default value is _true_. |
 
 **Returns grouped**
+
 | value | description |
 |:-----:|:------------|
 |  1 | Writing procedure finished successfully |
@@ -210,6 +222,7 @@ This function supports writing a new iButton identification code to tag models R
 | -21 to -29 | Failure of actual writing |
 
 **Returns specific**
+
 | value | description |
 |:-----:|:------------|
 |   1 | Writing procedure finished successfully
