@@ -9,3 +9,6 @@ Arduino library handling iButton identification tags such as DS1990A, TM1990A, R
 - [Reference documentation](https://vdwulp.github.io/iButtonTag/REFERENCE.html)
 - [GitHub repository](https://github.com/vdwulp/iButtonTag)
 - [Download latest release](https://github.com/vdwulp/iButtonTag/releases/latest)
+
+### [📚 R-package litellmR](https://github.com/vdwulp/litellmR)
+Package providing a lightweight interface for interacting with LiteLLM AI language models from R. The package offers simple helper functions for sending prompts, handling responses, and integrating LLM calls into data analysis workflows.
