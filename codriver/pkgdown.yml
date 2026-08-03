@@ -1,0 +1,10 @@
+pandoc: 3.8.3
+pkgdown: 2.2.1
+pkgdown_sha: ~
+articles:
+  getting-started-with-codriver: getting-started-with-codriver.html
+  start-using-codriver: start-using-codriver.html
+last_built: 2026-08-03T12:37Z
+urls:
+  reference: https://vdwulp.github.io/codriver/reference
+  article: https://vdwulp.github.io/codriver/articles
