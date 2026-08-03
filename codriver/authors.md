@@ -8,7 +8,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/vdwulp/codriver/blob/dev/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/vdwulp/codriver/blob/main/DESCRIPTION)
 
 van der Wulp S (2026). *codriver: Context-Aware AI Assistant for
 'RStudio'*. R package version 1.0.0,
