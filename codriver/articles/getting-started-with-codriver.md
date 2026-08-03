@@ -33,7 +33,7 @@ codriver::codriver_configure("openai_compatible",
 
 Any provider and argument supported by
 [ellmer](https://ellmer.tidyverse.org) works. Read on if you need help
-with authentication, model selection, or provider-specific notes.
+with provider naming, authentication, or provider-specific notes.
 
 ------------------------------------------------------------------------
 
@@ -80,8 +80,7 @@ select a default for most providers. If a default is used, ellmer will
 print it to the console on every codriver call. Specifying the model
 explicitly in
 [`codriver_configure()`](https://vdwulp.github.io/codriver/reference/codriver_configure.md)
-avoids this. See \[Model discovery\] below if you are unsure which
-models are available on your endpoint.
+avoids this.
 
 ------------------------------------------------------------------------
 

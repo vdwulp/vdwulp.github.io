@@ -98,7 +98,7 @@ this is all you need:</p>
 <span>  model    <span class="op">=</span> <span class="st">"gpt-4.1"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p>Any provider and argument supported by <a href="https://ellmer.tidyverse.org" class="external-link">ellmer</a> works. Read on if you
-need help with authentication, model selection, or provider-specific
+need help with provider naming, authentication, or provider-specific
 notes.</p>
 <hr>
 </div>
@@ -203,9 +203,8 @@ homepage</a> for the full and current list.</em></p>
 <p>Most providers require a <strong>model</strong> to be specified, but
 ellmer will select a default for most providers. If a default is used,
 ellmer will print it to the console on every codriver call. Specifying
-the model explicitly in <code><a href="../reference/codriver_configure.html">codriver_configure()</a></code> avoids this.
-See [Model discovery] below if you are unsure which models are available
-on your endpoint.</p>
+the model explicitly in <code><a href="../reference/codriver_configure.html">codriver_configure()</a></code> avoids
+this.</p>
 <hr>
 </div>
 <div class="section level2">

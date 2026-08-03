@@ -12,12 +12,12 @@ Source:
 
 van der Wulp S (2026). *codriver: Context-Aware AI Assistant for
 'RStudio'*. R package version 1.0.0,
-<https://vdwulp.github.io/codriver>.
+<https://vdwulp.github.io/codriver/>.
 
     @Manual{,
       title = {codriver: Context-Aware AI Assistant for 'RStudio'},
       author = {S.A. {van der Wulp}},
       year = {2026},
       note = {R package version 1.0.0},
-      url = {https://vdwulp.github.io/codriver},
+      url = {https://vdwulp.github.io/codriver/},
     }
