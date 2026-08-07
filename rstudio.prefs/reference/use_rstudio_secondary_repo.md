@@ -2,7 +2,7 @@
 
 This function updates the RStudio preferences saved in the
 `rstudio-prefs.json` file to include the secondary repositories passed
-my the user. If a new name for an existing repository is passed by the
+by the user. If a new name for an existing repository is passed by the
 user, the name will be updated in the JSON file.
 
 ## Usage
@@ -20,7 +20,9 @@ use_rstudio_secondary_repo(...)
 
 ## Value
 
-NULL, updates RStudio `rstudio-prefs.json` file
+Invisibly returns the updated `cran_mirror` preference as a named list
+on success, or `NULL` if no updates were made (no changes, user aborted,
+or not in an interactive session).
 
 ## Details
 

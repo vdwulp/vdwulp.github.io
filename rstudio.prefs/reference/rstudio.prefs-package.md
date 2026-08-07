@@ -22,3 +22,8 @@ Useful links:
 
 **Maintainer**: Daniel D. Sjoberg <danield.sjoberg@gmail.com>
 ([ORCID](https://orcid.org/0000-0003-0862-2018)) \[copyright holder\]
+
+Authors:
+
+- Daniel D. Sjoberg <danield.sjoberg@gmail.com>
+  ([ORCID](https://orcid.org/0000-0003-0862-2018)) \[copyright holder\]

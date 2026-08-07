@@ -3,7 +3,7 @@
 This function updates the RStudio preferences saved in the
 `rstudio-prefs.json` file. A full listing of preferences that may be
 modified are listed here
-<https://docs.rstudio.com/ide/server-pro/session-user-settings.html>
+<https://docs.posit.co/ide/server-pro/admin/reference/session_user_settings.html>
 
 ## Usage
 
@@ -20,7 +20,8 @@ use_rstudio_prefs(...)
 
 ## Value
 
-NULL, updates RStudio `rstudio-prefs.json` file
+Invisibly returns the updated preferences as a named list on success, or
+`NULL` if no updates were made (no changes, user aborted, or not in an
 
 ## Author
 

@@ -33,7 +33,7 @@ devtools::install_github("vdwulp/rstudio.prefs")
 
 Update the RStudio default preferences. Full list of modifiable settings
 here:
-<https://docs.rstudio.com/ide/server-pro/session-user-settings.html>
+<https://docs.posit.co/ide/server-pro/admin/reference/session_user_settings.html>
 
 ``` r
 

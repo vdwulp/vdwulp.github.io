@@ -52,24 +52,27 @@ the <code>addins.json</code> file.</p>
 <dl><dt id="arg--">...<a class="anchor" aria-label="anchor" href="#arg--"></a></dt>
 <dd><p>series of RStudio keyboard shortcuts to update. The argument
 name is the keyboard shortcut, and the value is a string of the function
-name that will execute. See examples.</p></dd>
+name that will execute, or <code>NULL</code> to remove the shortcut. If a new shortcut
+shares a key or function with an existing one, the previous binding is
+removed.</p></dd>
 
 
 <dt id="arg--write-json">.write_json<a class="anchor" aria-label="anchor" href="#arg--write-json"></a></dt>
 <dd><p>logical indicating whether to update and overwrite
 the existing JSON file of options. Default is <code>TRUE</code>. When <code>FALSE</code>,
-the function will return a list of all options, instead of writing
+the function will return a list of all shortcuts, instead of writing
 them to file.</p></dd>
 
 
 <dt id="arg--backup">.backup<a class="anchor" aria-label="anchor" href="#arg--backup"></a></dt>
-<dd><p>logical indicating whether to create a back-up of preferences
-file before it's updated. Default is <code>TRUE</code></p></dd>
+<dd><p>logical indicating whether to create a back-up of shortcuts
+file before it's updated. Default is <code>TRUE</code>.</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>NULL, updates RStudio <code>addins.json</code> file</p>
+    <p>When <code>.write_json = FALSE</code>, a named list of all shortcuts including
+the updates. Otherwise <code>NULL</code> invisibly.</p>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -79,8 +82,14 @@ file before it's updated. Default is <code>TRUE</code></p></dd>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># interactive()</span></span></span>
+<span class="r-in"><span><span class="co"># Add a shortcut</span></span></span>
 <span class="r-in"><span><span class="fu">use_rstudio_keyboard_shortcut</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  <span class="st">"Ctrl+Shift+/"</span> <span class="op">=</span> <span class="st">"rstudio.prefs::make_path_norm"</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Remove a shortcut</span></span></span>
+<span class="r-in"><span><span class="fu">use_rstudio_keyboard_shortcut</span><span class="op">(</span></span></span>
+<span class="r-in"><span>  <span class="st">"Ctrl+Shift+/"</span> <span class="op">=</span> <span class="cn">NULL</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
