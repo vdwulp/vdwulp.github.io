@@ -19,12 +19,12 @@ install.packages("rstudio.prefs")
 ```
 
 Install the development version of {rstudio.prefs} from
-[GitHub](https://github.com/ddsjoberg/rstudio.prefs) with:
+[GitHub](https://github.com/vdwulp/rstudio.prefs) with:
 
 ``` r
 
 # install.packages('devtools')
-devtools::install_github("ddsjoberg/rstudio.prefs")
+devtools::install_github("vdwulp/rstudio.prefs")
 ```
 
 ## Examples
@@ -100,3 +100,9 @@ use_rstudio_keyboard_shortcut(
 #> √ File 'C:/Users/sjobergd/AppData/Roaming/RStudio/keybindings/addins.json' updated.
 #> * Restart RStudio for updates to take effect.
 ```
+
+## Package history
+
+{rstudio.prefs} was originally created and developed by [Daniel D.
+Sjoberg](https://github.com/ddsjoberg). Maintenance was transferred to
+[S.A. van der Wulp](https://github.com/vdwulp) starting with v0.2.0.

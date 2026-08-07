@@ -38,7 +38,7 @@
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="search.json">
 </form></li>
-<li class="nav-item"><a class="external-link nav-link" href="https://github.com/ddsjoberg/rstudio.prefs/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/vdwulp/rstudio.prefs/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
@@ -58,10 +58,10 @@
 <p>Install {rstudio.prefs} from CRAN with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rstudio.prefs"</span><span class="op">)</span></span></code></pre></div>
-<p>Install the development version of {rstudio.prefs} from <a href="https://github.com/ddsjoberg/rstudio.prefs" class="external-link">GitHub</a> with:</p>
+<p>Install the development version of {rstudio.prefs} from <a href="https://github.com/vdwulp/rstudio.prefs" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages('devtools')</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"ddsjoberg/rstudio.prefs"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"vdwulp/rstudio.prefs"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
@@ -71,7 +71,7 @@
 </h3>
 <p>Update the RStudio default preferences. Full list of modifiable settings here: <a href="https://docs.rstudio.com/ide/server-pro/session-user-settings.html" class="external-link uri">https://docs.rstudio.com/ide/server-pro/session-user-settings.html</a></p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ddsjoberg/rstudio.prefs" class="external-link">rstudio.prefs</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/vdwulp/rstudio.prefs" class="external-link">rstudio.prefs</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="reference/use_rstudio_prefs.html">use_rstudio_prefs</a></span><span class="op">(</span></span>
 <span>  always_save_history <span class="op">=</span> <span class="cn">FALSE</span>,</span>
@@ -127,13 +127,18 @@
 <span><span class="co">#&gt; * Restart RStudio for updates to take effect.</span></span></code></pre></div>
 </div>
 </div>
+<div class="section level2">
+<h2 id="package-history">Package history<a class="anchor" aria-label="anchor" href="#package-history"></a>
+</h2>
+<p>{rstudio.prefs} was originally created and developed by <a href="https://github.com/ddsjoberg" class="external-link">Daniel D. Sjoberg</a>. Maintenance was transferred to <a href="https://github.com/vdwulp" class="external-link">S.A. van der Wulp</a> starting with v0.2.0.</p>
+</div>
 </div>
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
 <li><a href="https://cloud.r-project.org/package=rstudio.prefs" class="external-link">View on CRAN</a></li>
-<li><a href="https://github.com/ddsjoberg/rstudio.prefs/" class="external-link">Browse source code</a></li>
-<li><a href="https://github.com/ddsjoberg/rstudio.prefs/issues" class="external-link">Report a bug</a></li>
+<li><a href="https://github.com/vdwulp/rstudio.prefs/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/vdwulp/rstudio.prefs/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
@@ -157,15 +162,17 @@
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>
-<a href="https://www.danieldsjoberg.com/" class="external-link">ddsjoberg</a> <br><small class="roles"> Author, maintainer, copyright holder </small> <a href="https://orcid.org/0000-0003-0862-2018" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
+<a href="https://vdwulp.github.io/" class="external-link">vdwulp</a> <br><small class="roles"> Author, maintainer, copyright holder </small>   </li>
+<li>
+<a href="https://www.danieldsjoberg.com/" class="external-link">ddsjoberg</a> <br><small class="roles"> Author, copyright holder </small> <a href="https://orcid.org/0000-0003-0862-2018" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
 </ul>
 </div>
 
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://app.codecov.io/gh/ddsjoberg/rstudio.prefs?branch=main" class="external-link"><img src="https://codecov.io/gh/ddsjoberg/rstudio.prefs/branch/main/graph/badge.svg" alt="Codecov test coverage"></a></li>
-<li><a href="https://github.com/ddsjoberg/rstudio.prefs/actions" class="external-link"><img src="https://github.com/ddsjoberg/rstudio.prefs/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://app.codecov.io/gh/vdwulp/rstudio.prefs/tree/main" class="external-link"><img src="https://codecov.io/gh/vdwulp/rstudio.prefs/branch/main/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://github.com/vdwulp/rstudio.prefs/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/vdwulp/rstudio.prefs/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
 <li><a href="https://CRAN.R-project.org/package=rstudio.prefs" class="external-link"><img src="https://www.r-pkg.org/badges/version/rstudio.prefs" alt="CRAN status"></a></li>
 </ul>
 </div>
@@ -175,7 +182,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by <a href="https://www.danieldsjoberg.com/" class="external-link">ddsjoberg</a>.</p>
+  <p>Developed by <a href="https://vdwulp.github.io/" class="external-link">vdwulp</a>, <a href="https://www.danieldsjoberg.com/" class="external-link">ddsjoberg</a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">

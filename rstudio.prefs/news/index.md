@@ -9,7 +9,7 @@ CRAN release: 2022-07-16
 - Fix for
   [`use_rstudio_secondary_repo()`](https://vdwulp.github.io/rstudio.prefs/reference/use_rstudio_secondary_repo.md)
   when it is used to set the first secondary repository.
-  ([\#14](https://github.com/ddsjoberg/rstudio.prefs/issues/14))
+  ([\#14](https://github.com/vdwulp/rstudio.prefs/issues/14))
 
 - Updated
   [`use_rstudio_prefs()`](https://vdwulp.github.io/rstudio.prefs/reference/use_rstudio_prefs.md)
@@ -17,11 +17,11 @@ CRAN release: 2022-07-16
   [`use_rstudio_secondary_repo()`](https://vdwulp.github.io/rstudio.prefs/reference/use_rstudio_secondary_repo.md)
   to use the {rstudioapi} package to read and write RStudio preferences
   instead of manually manipulating the preferences JSON file.
-  ([\#12](https://github.com/ddsjoberg/rstudio.prefs/issues/12))
+  ([\#12](https://github.com/vdwulp/rstudio.prefs/issues/12))
 
 - Corrected the folder location of the app data folder from `RStudio` to
   `rstudio` on Unix.
-  ([\#11](https://github.com/ddsjoberg/rstudio.prefs/issues/11))
+  ([\#11](https://github.com/vdwulp/rstudio.prefs/issues/11))
 
 ## rstudio.prefs 0.1.8
 
