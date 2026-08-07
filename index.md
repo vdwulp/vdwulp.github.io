@@ -17,6 +17,14 @@ Codriver works directly in the RStudio source editor, without switching context 
 - [Article: Using codriver](https://vdwulp.github.io/codriver/articles/start-using-codriver.html)
 - [GitHub repository](https://github.com/vdwulp/codriver)
 
+### 📚 [R-package rstudio.prefs](https://github.com/vdwulp/rstudio.prefs)
+
+Package to programmatically set RStudio IDE preferences and shortcuts.
+
+**Quick links**
+- [General information](https://vdwulp.github.io/rstudio.prefs/)
+- [GitHub repository](https://github.com/vdwulp/rstudio.prefs)
+
 ### [📚 R-package litellmR](https://github.com/vdwulp/litellmR)
 Package providing a lightweight interface for interacting with LiteLLM AI language models from R. The package offers simple helper functions for sending prompts, handling responses, and integrating LLM calls into data analysis workflows.
 
