@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   getting-started-with-codriver: getting-started-with-codriver.html
   start-using-codriver: start-using-codriver.html
-last_built: 2026-08-03T13:25Z
+last_built: 2026-08-08T15:04Z
 urls:
   reference: https://vdwulp.github.io/codriver/reference
   article: https://vdwulp.github.io/codriver/articles

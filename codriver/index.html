@@ -66,7 +66,8 @@
 </h1>
 </div>
 <p></p>
-<p><a href="https://github.com/vdwulp/codriver/blob/master/LICENSE.md" class="external-link"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License: MIT"></a> <a href="https://github.com/vdwulp/codriver/releases/latest" class="external-link"><img src="https://img.shields.io/github/v/release/vdwulp/codriver.svg" alt="GitHub release"></a> <a href="https://github.com/vdwulp/codriver/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/vdwulp/codriver/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></p>
+<!-- badges: start -->
+
 <p><em>A context-aware AI assistant for RStudio that is literally at your fingertips.</em></p>
 <p>Codriver works directly in the RStudio source editor, without switching context or opening a separate chat window. When you press the keyboard shortcut, codriver reads your cursor position and selection to choose one of five modes — complete, generate, continue, edit, or comment — and presents suggestions in-place.</p>
 <div class="section level2">
@@ -82,8 +83,11 @@
 <div class="section level2">
 <h2 id="airplane-installation">✈️ Installation<a class="anchor" aria-label="anchor" href="#airplane-installation"></a>
 </h2>
-<p>Run these R commands:</p>
+<p>Run this R command to install the latest release of codriver from <a href="https://CRAN.R-project.org/package=codriver" class="external-link">CRAN</a>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"codriver"</span><span class="op">)</span></span></code></pre></div>
+<p>Run these R commands to install the development version of codriver from <a href="https://github.com/vdwulp/codriver" class="external-link">GitHub</a>:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Install remotes package if necessary</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
 <span></span>
@@ -94,7 +98,7 @@
 <h2 id="gear-configuration">⚙️ Configuration<a class="anchor" aria-label="anchor" href="#gear-configuration"></a>
 </h2>
 <p>Configure codriver to connect to your LLM provider or local model server:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># OpenAI</span></span>
 <span><span class="fu">codriver</span><span class="fu">::</span><span class="fu"><a href="reference/codriver_configure.html">codriver_configure</a></span><span class="op">(</span><span class="st">"openai"</span>, model <span class="op">=</span> <span class="st">"gpt-4.1"</span><span class="op">)</span></span>
 <span></span>

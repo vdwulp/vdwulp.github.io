@@ -18,6 +18,9 @@ need:
 
 ``` r
 
+# Install codriver
+install.packages("codriver")
+
 # OpenAI
 codriver::codriver_configure("openai", model = "gpt-5.1")
 

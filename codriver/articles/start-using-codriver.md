@@ -7,13 +7,6 @@ by your side to work in-place on the code you are editing.
 *If you haven’t configured yet, read the article [Getting started with
 codriver](https://vdwulp.github.io/codriver/articles/getting-started-with-codriver.md).*
 
-Codriver works directly in the RStudio source editor. At configuration
-time, it binds to the shortcut key **`Ctrl+/`** (default; you can pass
-another combination with the `shortcut` parameter). Pressing this
-shortcut — or invoking from the **Addins** menu — launches codriver.
-Codriver inspects the editor context, chooses and executes one of five
-modes, and presents the result.
-
 Codriver works directly in the RStudio source editor. During
 configuration, codriver offers to register the default keyboard shortcut
 **`Ctrl+/`**. Shortcut registration is strongly recommended, but can be
