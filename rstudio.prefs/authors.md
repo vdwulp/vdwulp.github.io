@@ -13,14 +13,14 @@
 Source:
 [`DESCRIPTION`](https://github.com/vdwulp/rstudio.prefs/blob/main/DESCRIPTION)
 
-van der Wulp S, Sjoberg D (2026). *rstudio.prefs: Set 'RStudio'
-Preferences*. R package version 0.1.9.9000,
+van der Wulp S, Sjoberg D (2026). *rstudio.prefs: Manage 'RStudio'
+Preferences and Addin Shortcuts*. R package version 0.2.0,
 <https://github.com/vdwulp/rstudio.prefs>.
 
     @Manual{,
-      title = {rstudio.prefs: Set 'RStudio' Preferences},
+      title = {rstudio.prefs: Manage 'RStudio' Preferences and Addin Shortcuts},
       author = {S.A. {van der Wulp} and Daniel D. Sjoberg},
       year = {2026},
-      note = {R package version 0.1.9.9000},
+      note = {R package version 0.2.0},
       url = {https://github.com/vdwulp/rstudio.prefs},
     }

@@ -1,29 +1,29 @@
-# rstudio.prefs: Set 'RStudio' Preferences
+# rstudio.prefs: Manage 'RStudio' Preferences and Addin Shortcuts
 
-As of 'RStudio' v1.3, the preferences in the Global Options dialog (and
-a number of other preferences that aren’t) are now saved in simple,
-plain-text JSON files. This package provides an interface for working
-with these 'RStudio' JSON preference files to easily make modifications
-without using the point-and-click option menus. This is particularly
-helpful when working on teams to ensure a unified experience across
-machines and utilizing settings for best practices.
+Provides an interface for working with 'RStudio' preference files to
+modify settings and addin shortcuts without using point-and-click option
+menus. Useful for ensuring a unified experience across devices and for
+enforcing best practices. Also exposes some settings not available in
+the Global Options dialog.
 
 ## See also
 
 Useful links:
 
-- <https://github.com/ddsjoberg/rstudio.prefs>
+- <https://github.com/vdwulp/rstudio.prefs>
 
-- <https://www.danieldsjoberg.com/rstudio.prefs/index.html>
+- <https://vdwulp.github.io/rstudio.prefs/>
 
-- Report bugs at <https://github.com/ddsjoberg/rstudio.prefs/issues>
+- Report bugs at <https://github.com/vdwulp/rstudio.prefs/issues>
 
 ## Author
 
-**Maintainer**: Daniel D. Sjoberg <danield.sjoberg@gmail.com>
-([ORCID](https://orcid.org/0000-0003-0862-2018)) \[copyright holder\]
+**Maintainer**: S.A. van der Wulp <vdwulp@gmail.com> \[copyright
+holder\]
 
 Authors:
+
+- S.A. van der Wulp <vdwulp@gmail.com> \[copyright holder\]
 
 - Daniel D. Sjoberg <danield.sjoberg@gmail.com>
   ([ORCID](https://orcid.org/0000-0003-0862-2018)) \[copyright holder\]

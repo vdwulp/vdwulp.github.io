@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">rstudio.prefs</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.9.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,25 @@
     </div>
 
     <div class="section level2">
-<h2 class="pkg-version" data-toc-text="development version" id="rstudioprefs-development-version">rstudio.prefs (development version)<a class="anchor" aria-label="anchor" href="#rstudioprefs-development-version"></a></h2>
+<h2 class="pkg-version" data-toc-text="0.2.0" id="rstudioprefs-020">rstudio.prefs 0.2.0<a class="anchor" aria-label="anchor" href="#rstudioprefs-020"></a></h2>
+<div class="section level4">
+<h4 id="new-0-2-0">New<a class="anchor" aria-label="anchor" href="#new-0-2-0"></a></h4>
+<ul><li>
+<code><a href="../reference/use_rstudio_keyboard_shortcut.html">use_rstudio_keyboard_shortcut()</a></code> now supports shortcut removal by passing <code>NULL</code> as the value (<a href="https://github.com/vdwulp/rstudio.prefs/issues/22" class="external-link">#22</a>).</li>
+</ul></div>
+<div class="section level4">
+<h4 id="fixes-0-2-0">Fixes<a class="anchor" aria-label="anchor" href="#fixes-0-2-0"></a></h4>
+<ul><li><p>Fixed bug in <code><a href="../reference/use_rstudio_keyboard_shortcut.html">use_rstudio_keyboard_shortcut()</a></code> where reassigning a shortcut to a function that already had one produced a corrupted <code>addins.json</code> entry with a <code>.1</code> suffix, causing the new shortcut to silently fail (<a href="https://github.com/vdwulp/rstudio.prefs/issues/22" class="external-link">#22</a>).</p></li>
+<li><p>Replaced deprecated <code><a href="https://purrr.tidyverse.org/reference/update_list.html" class="external-link">purrr::update_list()</a></code> with base R <code><a href="https://rdrr.io/r/utils/modifyList.html" class="external-link">modifyList()</a></code> in <code><a href="../reference/use_rstudio_keyboard_shortcut.html">use_rstudio_keyboard_shortcut()</a></code> (<a href="https://github.com/vdwulp/rstudio.prefs/issues/22" class="external-link">#22</a>).</p></li>
+<li><p>Fixed <code>check_shortcut_consistency()</code> erroring early when passed a non-existent name; wrapped <code>eval(rlang::parse_expr(.))</code> in <code><a href="https://rdrr.io/r/base/conditions.html" class="external-link">tryCatch()</a></code> (<a href="https://github.com/vdwulp/rstudio.prefs/pull/24" class="external-link">#24</a>).</p></li>
+<li><p>Updated URL in <code><a href="../reference/fetch_rstudio_prefs.html">fetch_rstudio_prefs()</a></code> to current docs, fixing missing preferences such as <code>enable_splash_screen</code> (<a href="https://github.com/vdwulp/rstudio.prefs/issues/20" class="external-link">#20</a>).</p></li>
+<li><p>Updated <code>@return</code> documentation for <code><a href="../reference/use_rstudio_prefs.html">use_rstudio_prefs()</a></code>, <code><a href="../reference/use_rstudio_secondary_repo.html">use_rstudio_secondary_repo()</a></code>, and <code><a href="../reference/use_rstudio_keyboard_shortcut.html">use_rstudio_keyboard_shortcut()</a></code> (<a href="https://github.com/vdwulp/rstudio.prefs/pull/19" class="external-link">#19</a>).</p></li>
+</ul></div>
+<div class="section level4">
+<h4 id="other-0-2-0">Other<a class="anchor" aria-label="anchor" href="#other-0-2-0"></a></h4>
+<ul><li><p>Maintainer transferred from Daniel D. Sjoberg to S.A. van der Wulp (<a href="https://github.com/vdwulp/rstudio.prefs/issues/20" class="external-link">#20</a>).</p></li>
+<li><p>Modernized package title, description, internal prefs data and GitHub Actions workflows. Increased testing coverage.</p></li>
+</ul></div>
 </div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.1.9" id="rstudioprefs-019">rstudio.prefs 0.1.9<a class="anchor" aria-label="anchor" href="#rstudioprefs-019"></a></h2><p class="text-muted">CRAN release: 2022-07-16</p>
