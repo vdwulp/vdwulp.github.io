@@ -5,7 +5,7 @@ All repositories on my GitHub profile.
 
 ## R / RStudio
 
-### 🛣️ [codriver → addin for RStudio](https://github.com/vdwulp/codriver)
+### 🛣️ [codriver → addin for RStudio](https://vdwulp.github.io/codriver/)
 
 *A context-aware AI assistant for RStudio that is literally at your fingertips.*
 
@@ -17,9 +17,11 @@ Codriver works directly in the RStudio source editor, without switching context 
 - [Article: Using codriver](https://vdwulp.github.io/codriver/articles/start-using-codriver.html)
 - [GitHub repository](https://github.com/vdwulp/codriver)
 
-### 📚 [R-package rstudio.prefs](https://github.com/vdwulp/rstudio.prefs)
+### ⚙️ [R-package rstudio.prefs](https://vdwulp.github.io/rstudio.prefs/)
 
-Package to programmatically set RStudio IDE preferences and shortcuts.
+*Manage RStudio preferences and addin shortcuts*
+
+The {rstudio.prefs} package provides a programmatic interface for working with RStudio preference files to modify settings and addin keyboard shortcuts without using point-and-click option menus. This is useful for teams and individuals working across multiple devices who want a **unified experience** and for enforcing **best practices**. The package also exposes settings not available in the *Global Options* dialog.
 
 **Quick links**
 - [General information](https://vdwulp.github.io/rstudio.prefs/)
