@@ -17,7 +17,7 @@ Codriver works directly in the RStudio source editor, without switching context 
 - [Article: Using codriver](https://vdwulp.github.io/codriver/articles/start-using-codriver.html)
 - [GitHub repository](https://github.com/vdwulp/codriver)
 
-### ⚙️ [R-package rstudio.prefs](https://vdwulp.github.io/rstudio.prefs/)
+### ⚙️ [R package rstudio.prefs](https://vdwulp.github.io/rstudio.prefs/)
 
 *Manage RStudio preferences and addin shortcuts*
 
