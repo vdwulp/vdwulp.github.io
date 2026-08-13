@@ -6,6 +6,7 @@ All repositories on my GitHub profile.
 ## R / RStudio
 
 ### 🛣️ [codriver → addin for RStudio](https://vdwulp.github.io/codriver/)
+![CRAN version](https://www.r-pkg.org/badges/version/codriver)
 
 *A context-aware AI assistant for RStudio that is literally at your fingertips.*
 
@@ -18,6 +19,7 @@ Codriver works directly in the RStudio source editor, without switching context 
 - [GitHub repository](https://github.com/vdwulp/codriver)
 
 ### ⚙️ [R package rstudio.prefs](https://vdwulp.github.io/rstudio.prefs/)
+![CRAN version](https://www.r-pkg.org/badges/version/rstudio.prefs)
 
 *Manage RStudio preferences and addin shortcuts*
 
@@ -27,12 +29,14 @@ The {rstudio.prefs} package provides a programmatic interface for working with R
 - [General information](https://vdwulp.github.io/rstudio.prefs/)
 - [GitHub repository](https://github.com/vdwulp/rstudio.prefs)
 
-### [📚 R-package litellmR](https://github.com/vdwulp/litellmR)
+### [📚 R package litellmR](https://github.com/vdwulp/litellmR)
 Package providing a lightweight interface for interacting with LiteLLM AI language models from R. The package offers simple helper functions for sending prompts, handling responses, and integrating LLM calls into data analysis workflows.
 
 ## Arduino
 
 ### [📚 Arduino iButtonTag Library](https://vdwulp.github.io/iButtonTag)
+![GitHub release](https://img.shields.io/github/v/release/vdwulp/iButtonTag.svg)
+
 Arduino library handling iButton identification tags such as DS1990A, TM1990A, RW1990, RW1990.2, RW2004, TM2004, TM01 and many others. Supports writing a new identification code to (re)writable iButton tags and reading of multiple iButton probes on the same data line.
 
 **Quick links**
