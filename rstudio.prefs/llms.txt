@@ -1,9 +1,9 @@
-# rstudio.prefs
+# ⚙️ rstudio.prefs
 
-*Manage RStudio Preferences and Addin Shortcuts*
+*Manage RStudio preferences and addin shortcuts*
 
 The {rstudio.prefs} package provides a programmatic interface for
-working with ‘RStudio’ preference files to modify settings and addin
+working with RStudio preference files to modify settings and addin
 keyboard shortcuts without using point-and-click option menus. This is
 useful for teams and individuals working across multiple devices who
 want a **unified experience** and for enforcing **best practices**. The

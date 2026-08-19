@@ -27,7 +27,7 @@ table.
 fetch_rstudio_prefs()
 #> ✔ Downloading list of available RStudio settings
 #> 
-#> # A tibble: 290 × 6
+#> # A tibble: 292 × 6
 #>    property                      description       type  default class is_scalar
 #>    <chr>                         <chr>             <chr> <chr>   <chr> <lgl>    
 #>  1 air_formatter_require_toml    When set, Air wi… bool… false   logi… TRUE     
@@ -40,5 +40,5 @@ fetch_rstudio_prefs()
 #>  8 assistant_completions_trigger Control when cod… stri… auto    char… TRUE     
 #>  9 assistant_indexing_enabled    When enabled, RS… bool… false   logi… TRUE     
 #> 10 assistant_nes_autoshow        When enabled, ne… bool… true    logi… TRUE     
-#> # ℹ 280 more rows
+#> # ℹ 282 more rows
 ```
