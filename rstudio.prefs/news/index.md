@@ -2,6 +2,8 @@
 
 ## rstudio.prefs 0.2.0
 
+CRAN release: 2026-08-20
+
 #### New
 
 - [`use_rstudio_keyboard_shortcut()`](https://vdwulp.github.io/rstudio.prefs/reference/use_rstudio_keyboard_shortcut.md)
