@@ -16,7 +16,8 @@ check_min_rstudio_version(version)
 
 ## Value
 
-path string to RStudio `rstudio-prefs.json` file
+Called for its side effect; aborts with an error if the version
+requirement is not met, otherwise returns invisibly.
 
 ## Author
 
@@ -26,6 +27,6 @@ Daniel D. Sjoberg
 
 ``` r
 if (interactive()) {
-  check_min_rstudio_version()
+  check_min_rstudio_version("1.3")
 }
 ```

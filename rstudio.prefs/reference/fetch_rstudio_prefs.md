@@ -1,7 +1,7 @@
-# Fetch table of RStudio Preferences
+# Fetch RStudio Preferences
 
-Preferences are fetched from
-<https://docs.posit.co/ide/server-pro/admin/reference/session_user_settings.html>
+Fetches the listing of supported preferences from the [RStudio
+documentation](https://docs.posit.co/ide/server-pro/admin/reference/session_user_settings.html).
 
 ## Usage
 
@@ -11,19 +11,17 @@ fetch_rstudio_prefs()
 
 ## Value
 
-tibble
+A tibble containing the RStudio preference definitions.
 
 ## Details
 
-Only preferences of type `"boolean"`, `"string"`, `"number"`,
-`"integer"`, and `"array"` are fetched from the table. TODO: Research
-how type `"object"` are passed and include in the fetched preferences
-table.
+Only preferences of type `"boolean"`, `"string"`, `"number"` and
+`"integer"` are returned. Preferences of type `"array"` and `"object"`
+are currently not supported and are ignored.
 
 ## Examples
 
 ``` r
-
 fetch_rstudio_prefs()
 #> ✔ Downloading list of available RStudio settings
 #> 

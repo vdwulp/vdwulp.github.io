@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">rstudio.prefs</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +32,24 @@
       <small>Source: <a href="https://github.com/vdwulp/rstudio.prefs/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="development version" id="rstudioprefs-development-version">rstudio.prefs (development version)<a class="anchor" aria-label="anchor" href="#rstudioprefs-development-version"></a></h2>
+<div class="section level4">
+<h4 id="enhancements-development-version">Enhancements<a class="anchor" aria-label="anchor" href="#enhancements-development-version"></a></h4>
+<ul><li>
+<code><a href="../reference/use_rstudio_prefs.html">use_rstudio_prefs()</a></code> now validates string preferences when a fixed set of allowed values is defined and warns on invalid values (<a href="https://github.com/vdwulp/rstudio.prefs/issues/13" class="external-link">#13</a>).</li>
+</ul></div>
+<div class="section level4">
+<h4 id="fixes-development-version">Fixes<a class="anchor" aria-label="anchor" href="#fixes-development-version"></a></h4>
+<ul><li>
+<code><a href="../reference/use_rstudio_prefs.html">use_rstudio_prefs()</a></code> now prevents errors from <code><a href="https://rstudio.github.io/rstudioapi/reference/writeRStudioPreference.html" class="external-link">rstudioapi::writeRStudioPreference()</a></code>, while continuing with other preferences. Preferences with invalid types are skipped, numeric values are converted to the correct type where applicable (<a href="https://github.com/vdwulp/rstudio.prefs/issues/31" class="external-link">#31</a>).</li>
+<li>Fixed documentation errors in <code><a href="../reference/check_min_rstudio_version.html">check_min_rstudio_version()</a></code>, and typos in <code>backup_file()</code> and <code>is_windows()</code>.</li>
+</ul></div>
+<div class="section level4">
+<h4 id="other-development-version">Other<a class="anchor" aria-label="anchor" href="#other-development-version"></a></h4>
+<ul><li>Moved <code>check_prefs_consistency()</code> and <code><a href="../reference/fetch_rstudio_prefs.html">fetch_rstudio_prefs()</a></code> alongside <code><a href="../reference/use_rstudio_prefs.html">use_rstudio_prefs()</a></code>. Updated and expanded testing for all three functions.</li>
+</ul></div>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.2.0" id="rstudioprefs-020">rstudio.prefs 0.2.0<a class="anchor" aria-label="anchor" href="#rstudioprefs-020"></a></h2><p class="text-muted">CRAN release: 2026-08-20</p>
 <div class="section level4">

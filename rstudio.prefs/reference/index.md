@@ -12,7 +12,7 @@
 ## Helper Functions
 
 - [`fetch_rstudio_prefs()`](https://vdwulp.github.io/rstudio.prefs/reference/fetch_rstudio_prefs.md)
-  : Fetch table of RStudio Preferences
+  : Fetch RStudio Preferences
 
 ## RStudio Add-ins
 

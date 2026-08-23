@@ -1,5 +1,35 @@
 # Changelog
 
+## rstudio.prefs (development version)
+
+#### Enhancements
+
+- [`use_rstudio_prefs()`](https://vdwulp.github.io/rstudio.prefs/reference/use_rstudio_prefs.md)
+  now validates string preferences when a fixed set of allowed values is
+  defined and warns on invalid values
+  ([\#13](https://github.com/vdwulp/rstudio.prefs/issues/13)).
+
+#### Fixes
+
+- [`use_rstudio_prefs()`](https://vdwulp.github.io/rstudio.prefs/reference/use_rstudio_prefs.md)
+  now prevents errors from
+  [`rstudioapi::writeRStudioPreference()`](https://rstudio.github.io/rstudioapi/reference/writeRStudioPreference.html),
+  while continuing with other preferences. Preferences with invalid
+  types are skipped, numeric values are converted to the correct type
+  where applicable
+  ([\#31](https://github.com/vdwulp/rstudio.prefs/issues/31)).
+- Fixed documentation errors in
+  [`check_min_rstudio_version()`](https://vdwulp.github.io/rstudio.prefs/reference/check_min_rstudio_version.md),
+  and typos in `backup_file()` and `is_windows()`.
+
+#### Other
+
+- Moved `check_prefs_consistency()` and
+  [`fetch_rstudio_prefs()`](https://vdwulp.github.io/rstudio.prefs/reference/fetch_rstudio_prefs.md)
+  alongside
+  [`use_rstudio_prefs()`](https://vdwulp.github.io/rstudio.prefs/reference/use_rstudio_prefs.md).
+  Updated and expanded testing for all three functions.
+
 ## rstudio.prefs 0.2.0
 
 CRAN release: 2026-08-20
