@@ -37,7 +37,19 @@
 <div class="section level4">
 <h4 id="enhancements-development-version">Enhancements<a class="anchor" aria-label="anchor" href="#enhancements-development-version"></a></h4>
 <ul><li>
-<code><a href="../reference/use_rstudio_prefs.html">use_rstudio_prefs()</a></code> now validates string preferences when a fixed set of allowed values is defined and warns on invalid values (<a href="https://github.com/vdwulp/rstudio.prefs/issues/13" class="external-link">#13</a>).</li>
+<p><code><a href="../reference/use_rstudio_prefs.html">use_rstudio_prefs()</a></code> now supports array preferences via a list of strings (<a href="https://github.com/vdwulp/rstudio.prefs/issues/28" class="external-link">#28</a>). For example: <code>use_rstudio_prefs(busy_exclusion_list = list("tmux", "screen"))</code>. Character vectors are also accepted for convenience.</p>
+<p>Current array preferences:</p>
+<ul><li><code>always_shown_extensions</code></li>
+<li><code>always_shown_files</code></li>
+<li><code>browser_fixed_width_fonts</code></li>
+<li><code>busy_exclusion_list</code></li>
+<li><code>disabled_aria_live_announcements</code></li>
+<li><code>file_monitor_ignored_components</code></li>
+<li><code>spelling_custom_dictionaries</code></li>
+<li><code>terminal_ignored_environment_variables</code></li>
+<li><code>zotero_libraries</code></li>
+</ul></li>
+<li><p><code><a href="../reference/use_rstudio_prefs.html">use_rstudio_prefs()</a></code> now validates string preferences when a fixed set of allowed values is defined and warns on invalid values (<a href="https://github.com/vdwulp/rstudio.prefs/issues/13" class="external-link">#13</a>).</p></li>
 </ul></div>
 <div class="section level4">
 <h4 id="fixes-development-version">Fixes<a class="anchor" aria-label="anchor" href="#fixes-development-version"></a></h4>
@@ -47,7 +59,8 @@
 </ul></div>
 <div class="section level4">
 <h4 id="other-development-version">Other<a class="anchor" aria-label="anchor" href="#other-development-version"></a></h4>
-<ul><li>Moved <code>check_prefs_consistency()</code> and <code><a href="../reference/fetch_rstudio_prefs.html">fetch_rstudio_prefs()</a></code> alongside <code><a href="../reference/use_rstudio_prefs.html">use_rstudio_prefs()</a></code>. Updated and expanded testing for all three functions.</li>
+<ul><li>Reorganized source files to bundle related functions and better reflect their contents.</li>
+<li>Aligned test files to source files, and expanded test coverage.</li>
 </ul></div>
 </div>
     <div class="section level2">

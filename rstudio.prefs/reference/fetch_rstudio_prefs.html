@@ -51,8 +51,8 @@ RStudio documentation."></head><body>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>Only preferences of type <code>"boolean"</code>, <code>"string"</code>, <code>"number"</code> and <code>"integer"</code>
-are returned. Preferences of type <code>"array"</code> and <code>"object"</code> are currently not
+    <p>Only preferences of type <code>"boolean"</code>, <code>"string"</code>, <code>"number"</code>, <code>"integer"</code> and
+<code>"array"</code> are returned. Preferences of type <code>"object"</code> are currently not
 supported and are ignored.</p>
     </div>
 
@@ -61,20 +61,20 @@ supported and are ignored.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">fetch_rstudio_prefs</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">✔</span> Downloading list of available <span style="color: #00BB00;">RStudio</span> settings</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 292 × 6</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 301 × 6</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    property                      description       type  default class is_scalar</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>    </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> air_formatter_require_toml    When set, Air wi… bool… false   logi… TRUE     </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> allow_source_columns          Whether to enabl… bool… true    logi… TRUE     </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> always_enable_rnw_concordance Whether to alway… bool… true    logi… TRUE     </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> always_save_history           Whether to alway… bool… true    logi… TRUE     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> ansi_console_mode             How to treat ANS… stri… on      char… TRUE     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> assistant                     Select which AI … stri… posit   char… TRUE     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> assistant_completions_delay   The delay (in mi… inte… 300     inte… TRUE     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> assistant_completions_trigger Control when cod… stri… auto    char… TRUE     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> assistant_indexing_enabled    When enabled, RS… bool… false   logi… TRUE     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> assistant_nes_autoshow        When enabled, ne… bool… true    logi… TRUE     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 282 more rows</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> always_shown_extensions       List of file ext… array .air.t… array FALSE    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> always_shown_files            List of file nam… array .build… array FALSE    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> ansi_console_mode             How to treat ANS… stri… on      char… TRUE     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> assistant                     Select which AI … stri… posit   char… TRUE     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> assistant_completions_delay   The delay (in mi… inte… 300     inte… TRUE     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> assistant_completions_trigger Control when cod… stri… auto    char… TRUE     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 291 more rows</span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>

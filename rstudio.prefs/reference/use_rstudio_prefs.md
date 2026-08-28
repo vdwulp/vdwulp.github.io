@@ -50,5 +50,10 @@ pref_list <-
        rainbow_parentheses = TRUE)
 
 use_rstudio_prefs(!!!pref_list)
+
+# Pass array type preference
+use_rstudio_prefs(
+  busy_exclusion_list = list("tmux", "screen")
+)
 }
 ```

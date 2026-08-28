@@ -5,6 +5,25 @@
 #### Enhancements
 
 - [`use_rstudio_prefs()`](https://vdwulp.github.io/rstudio.prefs/reference/use_rstudio_prefs.md)
+  now supports array preferences via a list of strings
+  ([\#28](https://github.com/vdwulp/rstudio.prefs/issues/28)). For
+  example:
+  `use_rstudio_prefs(busy_exclusion_list = list("tmux", "screen"))`.
+  Character vectors are also accepted for convenience.
+
+  Current array preferences:
+
+  - `always_shown_extensions`
+  - `always_shown_files`
+  - `browser_fixed_width_fonts`
+  - `busy_exclusion_list`
+  - `disabled_aria_live_announcements`
+  - `file_monitor_ignored_components`
+  - `spelling_custom_dictionaries`
+  - `terminal_ignored_environment_variables`
+  - `zotero_libraries`
+
+- [`use_rstudio_prefs()`](https://vdwulp.github.io/rstudio.prefs/reference/use_rstudio_prefs.md)
   now validates string preferences when a fixed set of allowed values is
   defined and warns on invalid values
   ([\#13](https://github.com/vdwulp/rstudio.prefs/issues/13)).
@@ -24,11 +43,9 @@
 
 #### Other
 
-- Moved `check_prefs_consistency()` and
-  [`fetch_rstudio_prefs()`](https://vdwulp.github.io/rstudio.prefs/reference/fetch_rstudio_prefs.md)
-  alongside
-  [`use_rstudio_prefs()`](https://vdwulp.github.io/rstudio.prefs/reference/use_rstudio_prefs.md).
-  Updated and expanded testing for all three functions.
+- Reorganized source files to bundle related functions and better
+  reflect their contents.
+- Aligned test files to source files, and expanded test coverage.
 
 ## rstudio.prefs 0.2.0
 
