@@ -41,6 +41,7 @@
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
 <li><a class="dropdown-item" href="../articles/getting-started-with-codriver.html">Getting started</a></li>
     <li><a class="dropdown-item" href="../articles/start-using-codriver.html">Using codriver</a></li>
+    <li><a class="dropdown-item" href="../articles/free-api-access.html">Free API access</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
@@ -72,13 +73,16 @@
     
     
 <p>To use codriver you need access to a <strong>large language model
-(LLM) provider</strong> — a cloud service like OpenAI or Anthropic, a
-model running on your own machine, or a proxy provided by your
-organisation. Codriver supports a wide range of providers by building on
-the <a href="https://ellmer.tidyverse.org" class="external-link">ellmer package</a>. This
-article explains how to connect codriver to your provider. It assumes
-you already have access to one — meaning you have signed up, obtained an
-API key, or been given credentials by your organisation.</p>
+(LLM)</strong>, either through a cloud provider like OpenAI or
+Anthropic, a model running on your own machine, or a proxy provided by
+your organisation. Codriver supports a wide range of providers by
+building on the <a href="https://ellmer.tidyverse.org" class="external-link">ellmer
+package</a>.</p>
+<p>This article explains how to connect codriver to your provider. It
+assumes you already have access to one, meaning you have signed up,
+obtained an API key, or been given credentials by your organisation. If
+you don’t have access yet, see <a href="https://vdwulp.github.io/codriver/articles/free-api-access.html"><strong>Free
+API access</strong></a> for options that are free to start with.</p>
 <hr>
 <div class="section level2">
 <h2 id="quick-start">Quick start<a class="anchor" aria-label="anchor" href="#quick-start"></a>
@@ -111,8 +115,8 @@ notes.</p>
 <p>Codriver does not communicate with LLM providers directly. Instead,
 it relies on <a href="https://ellmer.tidyverse.org" class="external-link"><strong>ellmer</strong></a>, a
 package that provides a unified interface to a wide range of providers.
-Ellmer supports many popular services — OpenAI, Anthropic Claude, Google
-Gemini, Mistral, Ollama, and more — and handles the details of
+Ellmer supports many popular services - OpenAI, Anthropic Claude, Google
+Gemini, Mistral, Ollama, and more - and handles the details of
 authentication and communication for each one.</p>
 <p>When you call <code><a href="../reference/codriver_configure.html">codriver::codriver_configure()</a></code>, you tell
 codriver which provider to use by passing its <strong>name</strong> — a
@@ -120,6 +124,11 @@ short string like <code>"openai"</code> or <code>"anthropic"</code>. Any
 argument accepted by the corresponding ellmer constructors can be passed
 directly through <code><a href="../reference/codriver_configure.html">codriver_configure()</a></code>.</p>
 <table class="table">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
 <thead><tr class="header">
 <th>Provider</th>
 <th><code>name</code></th>
@@ -129,7 +138,24 @@ directly through <code><a href="../reference/codriver_configure.html">codriver_c
 <tr class="odd">
 <td>OpenAI</td>
 <td><code>"openai"</code></td>
-<td><code>OPENAI_API_KEY</code></td>
+<td>
+<code>OPENAI_API_KEY</code><br><a href="#openai">see below</a>
+</td>
+</tr>
+<tr class="even">
+<td>OpenAI-compatible</td>
+<td><code>"openai_compatible"</code></td>
+<td>
+<code>OPENAI_API_KEY</code><br><a href="#openai-compatible-endpoint">see below</a>
+</td>
+</tr>
+<tr class="odd">
+<td>Azure OpenAI</td>
+<td><code>"azure_openai"</code></td>
+<td>
+<code>AZURE_OPENAI_API_KEY</code><br><a href="#azure-openai">see
+below</a>
+</td>
 </tr>
 <tr class="even">
 <td>Anthropic</td>
@@ -139,27 +165,20 @@ directly through <code><a href="../reference/codriver_configure.html">codriver_c
 <tr class="odd">
 <td>Google Gemini</td>
 <td><code>"google_gemini"</code></td>
-<td><code>GEMINI_API_KEY</code></td>
+<td>
+<code>GOOGLE_API_KEY</code><br>see <a href="https://vdwulp.github.io/codriver/articles/free-api-access.html#google-gemini">Free
+API access</a>
+</td>
 </tr>
 <tr class="even">
-<td>Azure OpenAI</td>
-<td><code>"azure_openai"</code></td>
-<td><code>AZURE_OPENAI_API_KEY</code></td>
-</tr>
-<tr class="odd">
 <td>AWS Bedrock</td>
 <td><code>"aws_bedrock"</code></td>
 <td><em>(IAM credentials)</em></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Databricks</td>
 <td><code>"databricks"</code></td>
 <td><code>DATABRICKS_TOKEN</code></td>
-</tr>
-<tr class="odd">
-<td>Snowflake</td>
-<td><code>"snowflake"</code></td>
-<td><code>SNOWFLAKE_TOKEN</code></td>
 </tr>
 <tr class="even">
 <td>Groq</td>
@@ -167,40 +186,49 @@ directly through <code><a href="../reference/codriver_configure.html">codriver_c
 <td><code>GROQ_API_KEY</code></td>
 </tr>
 <tr class="odd">
-<td>Mistral</td>
-<td><code>"mistral"</code></td>
-<td><code>MISTRAL_API_KEY</code></td>
+<td>Ollama (local)</td>
+<td><code>"ollama"</code></td>
+<td>
+<em>(none required)</em><br>see <a href="https://vdwulp.github.io/codriver/articles/free-api-access.html#ollama">Free
+API access</a>
+</td>
 </tr>
 <tr class="even">
-<td>Perplexity</td>
-<td><code>"perplexity"</code></td>
-<td><code>PERPLEXITY_API_KEY</code></td>
-</tr>
-<tr class="odd">
 <td>OpenRouter</td>
 <td><code>"openrouter"</code></td>
 <td><code>OPENROUTER_API_KEY</code></td>
 </tr>
-<tr class="even">
-<td>Ollama (local)</td>
-<td><code>"ollama"</code></td>
-<td><em>(none required)</em></td>
-</tr>
 <tr class="odd">
 <td>LM Studio (local)</td>
 <td><code>"lmstudio"</code></td>
-<td><em>(none required)</em></td>
+<td>
+<em>(none required)</em><br>see <a href="https://vdwulp.github.io/codriver/articles/free-api-access.html#lm-studio">Free
+API access</a>
+</td>
 </tr>
 <tr class="even">
-<td>OpenAI-compatible</td>
-<td><code>"openai_compatible"</code></td>
-<td><code>OPENAI_API_KEY</code></td>
+<td>Mistral</td>
+<td><code>"mistral"</code></td>
+<td>
+<code>MISTRAL_API_KEY</code><br>see <a href="https://vdwulp.github.io/codriver/articles/free-api-access.html#mistral">Free
+API access</a>
+</td>
+</tr>
+<tr class="odd">
+<td>Perplexity</td>
+<td><code>"perplexity"</code></td>
+<td><code>PERPLEXITY_API_KEY</code></td>
+</tr>
+<tr class="even">
+<td>Snowflake</td>
+<td><code>"snowflake"</code></td>
+<td><code>SNOWFLAKE_TOKEN</code></td>
 </tr>
 </tbody>
 </table>
 <blockquote>
 <p><em>The table covers providers commonly used. Ellmer supports
-additional providers - see the <a href="https://ellmer.tidyverse.org/index.html#providers" class="external-link">ellmer
+additional providers. See the <a href="https://ellmer.tidyverse.org/index.html#providers" class="external-link">ellmer
 homepage</a> for the full and current list.</em></p>
 </blockquote>
 <p>Most providers require a <strong>model</strong> to be specified, but
@@ -231,7 +259,7 @@ ellmer constructor. For example, running
 tells you about their specific authentication mechanism.</p>
 <p>The recommended way to set an environment variable permanently is to
 add it to your <code>.Renviron</code> file, which R reads automatically
-at startup. The example below shows how this is done.</p>
+at startup. The OpenAI example below shows how this is done.</p>
 <hr>
 </div>
 <div class="section level2">
@@ -247,7 +275,8 @@ create an API key under <strong>API keys</strong>.</p>
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/file.edit.html" class="external-link">file.edit</a></span><span class="op">(</span><span class="st">"~/.Renviron"</span><span class="op">)</span></span></code></pre></div>
 <p>Add:</p>
 <pre><code><span><span class="va">OPENAI_API_KEY</span><span class="op">=</span><span class="va">your_key_here</span></span></code></pre>
-<p>Save the file, restart R and then configure codriver:</p>
+<p>Save the file, <em>restart RStudio</em> and then configure
+codriver:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">codriver</span><span class="fu">::</span><span class="fu"><a href="../reference/codriver_configure.html">codriver_configure</a></span><span class="op">(</span><span class="st">"openai"</span>, model <span class="op">=</span> <span class="st">"gpt-5.1"</span><span class="op">)</span></span></code></pre></div>
 <p>That is all that is needed. You’re now ready to <a href="start-using-codriver.html">start using codriver</a> in your
@@ -258,9 +287,9 @@ RStudio workflow.</p>
 <h2 id="openai-compatible-endpoint">OpenAI-compatible endpoint<a class="anchor" aria-label="anchor" href="#openai-compatible-endpoint"></a>
 </h2>
 <p>Many organisations run their own LLM infrastructure that speaks the
-OpenAI API format. This includes local model servers, research clusters,
-and company proxies. For these, use <code>"openai_compatible"</code> as
-the provider name.</p>
+OpenAI API format. This includes local model servers, university
+research clusters, and company proxies. For these, use
+<code>"openai_compatible"</code> as the provider name.</p>
 <p>Unlike named providers, an OpenAI-compatible endpoint has no
 defaults. You will need to know the <strong>base URL</strong> and
 <strong>model name</strong> from your organisation’s documentation or
@@ -285,6 +314,62 @@ in your code.</em></p>
 <hr>
 </div>
 <div class="section level2">
+<h2 id="microsoft-azure-openai">Microsoft Azure OpenAI<a class="anchor" aria-label="anchor" href="#microsoft-azure-openai"></a>
+</h2>
+<p>Another service regularly used by organisations is
+<code>"azure_openai"</code>. For this provider, you always need the
+<strong>endpoint</strong> of your Azure resource. In addition,
+authentication is handled in one of three ways. Your IT team can tell
+you which authentication method applies and what values to use.</p>
+<div class="section level5">
+<h5 id="option-1-api-key">Option 1: API key<a class="anchor" aria-label="anchor" href="#option-1-api-key"></a>
+</h5>
+<p>Set the endpoint and API key in your <code>.Renviron</code>:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/file.edit.html" class="external-link">file.edit</a></span><span class="op">(</span><span class="st">"~/.Renviron"</span><span class="op">)</span></span></code></pre></div>
+<p>Add:</p>
+<pre><code>AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com
+AZURE_OPENAI_API_KEY=*your_key_here*</code></pre>
+<p>Save the file, <em>restart RStudio</em> and then configure codriver
+(see below).</p>
+</div>
+<div class="section level5">
+<h5 id="option-2-service-principal">Option 2: Service principal<a class="anchor" aria-label="anchor" href="#option-2-service-principal"></a>
+</h5>
+<p>Set the endpoint and service principal values in your
+<code>.Renviron</code>:</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/file.edit.html" class="external-link">file.edit</a></span><span class="op">(</span><span class="st">"~/.Renviron"</span><span class="op">)</span></span></code></pre></div>
+<p>Add:</p>
+<pre><code>AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com
+AZURE_TENANT_ID=*your_tenant_id*
+AZURE_CLIENT_ID=*your_client_id*
+AZURE_CLIENT_SECRET=*your_client_secret*</code></pre>
+<p>Save the file, <em>restart RStudio</em> and then configure codriver
+(see below).</p>
+</div>
+<div class="section level5">
+<h5 id="option-3-entra-id">Option 3: Entra ID<a class="anchor" aria-label="anchor" href="#option-3-entra-id"></a>
+</h5>
+<p>Set the endpoint in your <code>.Renviron</code>:</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/file.edit.html" class="external-link">file.edit</a></span><span class="op">(</span><span class="st">"~/.Renviron"</span><span class="op">)</span></span></code></pre></div>
+<p>Add:</p>
+<pre><code>AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com</code></pre>
+<p>Save the file, <em>restart RStudio</em> and then configure codriver
+(see below). When none of the other authentication options are used, an
+<em>Entra ID</em> browser login will open when configuring codriver.</p>
+</div>
+<div class="section level5">
+<h5 id="configure-codriver">Configure codriver<a class="anchor" aria-label="anchor" href="#configure-codriver"></a>
+</h5>
+<p>To configure codriver after setting authentication values, use:</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">codriver</span><span class="fu">::</span><span class="fu"><a href="../reference/codriver_configure.html">codriver_configure</a></span><span class="op">(</span><span class="st">"azure_openai"</span>, model <span class="op">=</span> <span class="st">"your-deployment-name"</span><span class="op">)</span></span></code></pre></div>
+<hr>
+</div>
+</div>
+<div class="section level2">
 <h2 id="provider-notes">Provider notes<a class="anchor" aria-label="anchor" href="#provider-notes"></a>
 </h2>
 <p>Some notes on experience with providers:</p>
@@ -299,12 +384,16 @@ work well with codriver.</p></li>
 <p><strong>Google Gemini</strong> produces good results too. When
 using <em>free tier</em> be aware that some models are <em>very
 slow</em> and only allow for a few requests per day. Gemini 3.1 Flash
-Lite has been proven to be quick and works well with codriver.</p>
+Lite and Gemini 3.5 Flash Lite have been proven to be quick and working
+well with codriver. See <a href="https://vdwulp.github.io/codriver/articles/free-api-access.html#google-gemini">Free
+API access</a> for more details.</p>
+<blockquote>
 <p>The Gemini Flash 2.5 (non-lite) series models use an internal
 reasoning process that can occasionally cause thought text to appear in
 completions. If you encounter this, try passing <code>api_args</code> to
 suppress thought output in the response:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+</blockquote>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">codriver</span><span class="fu">::</span><span class="fu"><a href="../reference/codriver_configure.html">codriver_configure</a></span><span class="op">(</span></span>
 <span>  <span class="st">"google_gemini"</span>,</span>
 <span>  model    <span class="op">=</span> <span class="st">"gemini-2.5-flash"</span>,</span>

@@ -1,17 +1,17 @@
 # Using codriver
 
 Once you have configured a provider, codriver is the context-aware AI
-assistant for RStudio that is literally at your fingertips. Codriver is
-by your side to work in-place on the code you are editing.
+assistant that sits at your cursor - no chat, no switching. Codriver
+brings AI code assistance directly to the RStudio source editor, working
+in-place on the code you are editing.
 
 *If you haven’t configured yet, read the article [Getting started with
 codriver](https://vdwulp.github.io/codriver/articles/getting-started-with-codriver.md).*
 
-Codriver works directly in the RStudio source editor. During
-configuration, codriver offers to register the default keyboard shortcut
-**`Ctrl+/`**. Shortcut registration is strongly recommended, but can be
-skipped or changed later via **Tools \> Modify Keyboard Shortcuts** in
-RStudio.
+During configuration, codriver offers to register the default keyboard
+shortcut **`Ctrl+/`**. Shortcut registration is strongly recommended,
+but can be skipped or changed later via **Tools \> Modify Keyboard
+Shortcuts** in RStudio.
 
 Pressing the keyboard shortcut - or invoking from the **Addins** menu -
 launches codriver. Codriver inspects the editor context, chooses and

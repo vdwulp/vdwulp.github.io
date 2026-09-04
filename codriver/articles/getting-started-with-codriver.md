@@ -1,13 +1,17 @@
 # Getting started
 
-To use codriver you need access to a **large language model (LLM)
-provider** — a cloud service like OpenAI or Anthropic, a model running
-on your own machine, or a proxy provided by your organisation. Codriver
-supports a wide range of providers by building on the [ellmer
-package](https://ellmer.tidyverse.org). This article explains how to
-connect codriver to your provider. It assumes you already have access to
-one — meaning you have signed up, obtained an API key, or been given
-credentials by your organisation.
+To use codriver you need access to a **large language model (LLM)**,
+either through a cloud provider like OpenAI or Anthropic, a model
+running on your own machine, or a proxy provided by your organisation.
+Codriver supports a wide range of providers by building on the [ellmer
+package](https://ellmer.tidyverse.org).
+
+This article explains how to connect codriver to your provider. It
+assumes you already have access to one, meaning you have signed up,
+obtained an API key, or been given credentials by your organisation. If
+you don’t have access yet, see [**Free API
+access**](https://vdwulp.github.io/codriver/articles/free-api-access.html)
+for options that are free to start with.
 
 ------------------------------------------------------------------------
 
@@ -45,8 +49,8 @@ with provider naming, authentication, or provider-specific notes.
 Codriver does not communicate with LLM providers directly. Instead, it
 relies on [**ellmer**](https://ellmer.tidyverse.org), a package that
 provides a unified interface to a wide range of providers. Ellmer
-supports many popular services — OpenAI, Anthropic Claude, Google
-Gemini, Mistral, Ollama, and more — and handles the details of
+supports many popular services - OpenAI, Anthropic Claude, Google
+Gemini, Mistral, Ollama, and more - and handles the details of
 authentication and communication for each one.
 
 When you call
@@ -56,25 +60,10 @@ short string like `"openai"` or `"anthropic"`. Any argument accepted by
 the corresponding ellmer constructors can be passed directly through
 [`codriver_configure()`](https://vdwulp.github.io/codriver/reference/codriver_configure.md).
 
-| Provider          | `name`                | Environment variable   |
-|-------------------|-----------------------|------------------------|
-| OpenAI            | `"openai"`            | `OPENAI_API_KEY`       |
-| Anthropic         | `"anthropic"`         | `ANTHROPIC_API_KEY`    |
-| Google Gemini     | `"google_gemini"`     | `GEMINI_API_KEY`       |
-| Azure OpenAI      | `"azure_openai"`      | `AZURE_OPENAI_API_KEY` |
-| AWS Bedrock       | `"aws_bedrock"`       | *(IAM credentials)*    |
-| Databricks        | `"databricks"`        | `DATABRICKS_TOKEN`     |
-| Snowflake         | `"snowflake"`         | `SNOWFLAKE_TOKEN`      |
-| Groq              | `"groq"`              | `GROQ_API_KEY`         |
-| Mistral           | `"mistral"`           | `MISTRAL_API_KEY`      |
-| Perplexity        | `"perplexity"`        | `PERPLEXITY_API_KEY`   |
-| OpenRouter        | `"openrouter"`        | `OPENROUTER_API_KEY`   |
-| Ollama (local)    | `"ollama"`            | *(none required)*      |
-| LM Studio (local) | `"lmstudio"`          | *(none required)*      |
-| OpenAI-compatible | `"openai_compatible"` | `OPENAI_API_KEY`       |
+[TABLE]
 
 > *The table covers providers commonly used. Ellmer supports additional
-> providers - see the [ellmer
+> providers. See the [ellmer
 > homepage](https://ellmer.tidyverse.org/index.html#providers) for the
 > full and current list.*
 
@@ -110,7 +99,7 @@ tells you about their specific authentication mechanism.
 
 The recommended way to set an environment variable permanently is to add
 it to your `.Renviron` file, which R reads automatically at startup. The
-example below shows how this is done.
+OpenAI example below shows how this is done.
 
 ------------------------------------------------------------------------
 
@@ -135,7 +124,7 @@ Add:
 
     OPENAI_API_KEY=your_key_here
 
-Save the file, restart R and then configure codriver:
+Save the file, *restart RStudio* and then configure codriver:
 
 ``` r
 
@@ -151,9 +140,9 @@ in your RStudio workflow.
 ## OpenAI-compatible endpoint
 
 Many organisations run their own LLM infrastructure that speaks the
-OpenAI API format. This includes local model servers, research clusters,
-and company proxies. For these, use `"openai_compatible"` as the
-provider name.
+OpenAI API format. This includes local model servers, university
+research clusters, and company proxies. For these, use
+`"openai_compatible"` as the provider name.
 
 Unlike named providers, an OpenAI-compatible endpoint has no defaults.
 You will need to know the **base URL** and **model name** from your
@@ -180,6 +169,78 @@ codriver::codriver_configure(
 
 ------------------------------------------------------------------------
 
+## Microsoft Azure OpenAI
+
+Another service regularly used by organisations is `"azure_openai"`. For
+this provider, you always need the **endpoint** of your Azure resource.
+In addition, authentication is handled in one of three ways. Your IT
+team can tell you which authentication method applies and what values to
+use.
+
+##### Option 1: API key
+
+Set the endpoint and API key in your `.Renviron`:
+
+``` r
+
+file.edit("~/.Renviron")
+```
+
+Add:
+
+    AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com
+    AZURE_OPENAI_API_KEY=*your_key_here*
+
+Save the file, *restart RStudio* and then configure codriver (see
+below).
+
+##### Option 2: Service principal
+
+Set the endpoint and service principal values in your `.Renviron`:
+
+``` r
+
+file.edit("~/.Renviron")
+```
+
+Add:
+
+    AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com
+    AZURE_TENANT_ID=*your_tenant_id*
+    AZURE_CLIENT_ID=*your_client_id*
+    AZURE_CLIENT_SECRET=*your_client_secret*
+
+Save the file, *restart RStudio* and then configure codriver (see
+below).
+
+##### Option 3: Entra ID
+
+Set the endpoint in your `.Renviron`:
+
+``` r
+
+file.edit("~/.Renviron")
+```
+
+Add:
+
+    AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com
+
+Save the file, *restart RStudio* and then configure codriver (see
+below). When none of the other authentication options are used, an
+*Entra ID* browser login will open when configuring codriver.
+
+##### Configure codriver
+
+To configure codriver after setting authentication values, use:
+
+``` r
+
+codriver::codriver_configure("azure_openai", model = "your-deployment-name")
+```
+
+------------------------------------------------------------------------
+
 ## Provider notes
 
 Some notes on experience with providers:
@@ -194,13 +255,15 @@ Some notes on experience with providers:
 
 - **Google Gemini** produces good results too. When using *free tier* be
   aware that some models are *very slow* and only allow for a few
-  requests per day. Gemini 3.1 Flash Lite has been proven to be quick
-  and works well with codriver.
+  requests per day. Gemini 3.1 Flash Lite and Gemini 3.5 Flash Lite have
+  been proven to be quick and working well with codriver. See [Free API
+  access](https://vdwulp.github.io/codriver/articles/free-api-access.html#google-gemini)
+  for more details.
 
-  The Gemini Flash 2.5 (non-lite) series models use an internal
-  reasoning process that can occasionally cause thought text to appear
-  in completions. If you encounter this, try passing `api_args` to
-  suppress thought output in the response:
+  > The Gemini Flash 2.5 (non-lite) series models use an internal
+  > reasoning process that can occasionally cause thought text to appear
+  > in completions. If you encounter this, try passing `api_args` to
+  > suppress thought output in the response:
 
   ``` r
 
