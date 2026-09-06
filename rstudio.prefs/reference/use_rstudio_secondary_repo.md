@@ -1,9 +1,6 @@
 # Set RStudio Secondary Repository
 
-This function updates the RStudio preferences saved in the
-`rstudio-prefs.json` file to include the secondary repositories passed
-by the user. If a new name for an existing repository is passed by the
-user, the name will be updated in the JSON file.
+Updates the secondary repositories in `rstudio-prefs.json`.
 
 ## Usage
 
@@ -15,8 +12,10 @@ use_rstudio_secondary_repo(...)
 
 - ...:
 
-  series of named secondary repositories, e.g.
-  `ropensci = "https://ropensci.r-universe.dev"`
+  a series of named secondary repositories, e.g.
+  `ropensci = "https://ropensci.r-universe.dev"`. Pass `NULL` to remove
+  a repository, e.g. `ropensci = NULL`. If a URL is passed under a new
+  name, the old name is removed.
 
 ## Value
 
@@ -24,24 +23,23 @@ Invisibly returns the updated `cran_mirror` preference as a named list
 on success, or `NULL` if no updates were made (no changes, user aborted,
 or not in an interactive session).
 
-## Details
-
-A note for users outside of the USA. If the country in
-`.$cran_mirror$country` has not been previously recorded in the JSON
-preferences file (typically, auto set by RStudio), the
-`use_rstudio_secondary_repo()` function will set `"country" = "us"`.
-
 ## Author
 
-Daniel D. Sjoberg
+Daniel D. Sjoberg (2021-2022)
+
+S.A. van der Wulp (since 2026)
 
 ## Examples
 
 ``` r
 if (FALSE) { # interactive()
+# Add a repository
 use_rstudio_secondary_repo(
   ropensci = "https://ropensci.r-universe.dev",
-  ddsjoberg = "https://ddsjoberg.r-universe.dev"
+  username = "https://username.r-universe.dev"
 )
+
+# Remove a repository
+use_rstudio_secondary_repo(ropensci = NULL)
 }
 ```
