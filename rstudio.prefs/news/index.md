@@ -60,6 +60,8 @@
 
 - Aligned test files to source files, and expanded test coverage.
 
+- Added package logo.
+
 ## rstudio.prefs 0.2.0
 
 CRAN release: 2026-08-20
