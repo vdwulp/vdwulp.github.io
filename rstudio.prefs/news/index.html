@@ -49,12 +49,14 @@
 <li><code>zotero_libraries</code></li>
 </ul></li>
 <li><p><code><a href="../reference/use_rstudio_prefs.html">use_rstudio_prefs()</a></code> now validates string preferences when a fixed set of allowed values is defined and warns on invalid values (<a href="https://github.com/vdwulp/rstudio.prefs/issues/13" class="external-link">#13</a>).</p></li>
+<li><p><code>use_rstudio_keyboard_shortcut(.write_json = FALSE)</code> now also returns the current shortcuts when called without updates, and no longer asks for confirmation (<a href="https://github.com/vdwulp/rstudio.prefs/issues/30" class="external-link">#30</a>).</p></li>
 </ul></div>
 <div class="section level4">
 <h4 id="fixes-development-version">Fixes<a class="anchor" aria-label="anchor" href="#fixes-development-version"></a></h4>
 <ul><li><p><code><a href="../reference/use_rstudio_prefs.html">use_rstudio_prefs()</a></code> now prevents errors from <code><a href="https://rstudio.github.io/rstudioapi/reference/writeRStudioPreference.html" class="external-link">rstudioapi::writeRStudioPreference()</a></code>, while continuing with other preferences. Preferences with invalid types are skipped, numeric values are converted to the correct type where applicable (<a href="https://github.com/vdwulp/rstudio.prefs/issues/31" class="external-link">#31</a>).</p></li>
 <li><p>Replaced deprecated <code><a href="https://purrr.tidyverse.org/reference/update_list.html" class="external-link">purrr::update_list()</a></code> with base R <code><a href="https://rdrr.io/r/utils/modifyList.html" class="external-link">modifyList()</a></code> in <code><a href="../reference/use_rstudio_secondary_repo.html">use_rstudio_secondary_repo()</a></code>. This replacement also fixed removal of the old repo name when its URL is reassigned to a new name, instead of leaving it as an empty entry.</p></li>
 <li><p>Fixed error when removing a non-existent secondary repo with <code>use_rstudio_secondary_repo(repo_name = NULL)</code>.</p></li>
+<li><p><code><a href="../reference/use_rstudio_keyboard_shortcut.html">use_rstudio_keyboard_shortcut()</a></code> no longer creates the <code>keybindings</code> directory when not needed, and no longer creates empty <code>editor_bindings.json</code> and <code>rstudio_bindings.json</code> files (<a href="https://github.com/vdwulp/rstudio.prefs/issues/30" class="external-link">#30</a>).</p></li>
 <li><p>Fixed documentation errors in <code><a href="../reference/check_min_rstudio_version.html">check_min_rstudio_version()</a></code>, and typos in <code>backup_file()</code> and <code>is_windows()</code>.</p></li>
 </ul></div>
 <div class="section level4">
