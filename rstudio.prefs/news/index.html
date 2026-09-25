@@ -56,6 +56,7 @@
 <ul><li><p><code><a href="../reference/use_rstudio_prefs.html">use_rstudio_prefs()</a></code> now prevents errors from <code><a href="https://rstudio.github.io/rstudioapi/reference/writeRStudioPreference.html" class="external-link">rstudioapi::writeRStudioPreference()</a></code>, while continuing with other preferences. Preferences with invalid types are skipped, numeric values are converted to the correct type where applicable (<a href="https://github.com/vdwulp/rstudio.prefs/issues/31" class="external-link">#31</a>).</p></li>
 <li><p>Replaced deprecated <code><a href="https://purrr.tidyverse.org/reference/update_list.html" class="external-link">purrr::update_list()</a></code> with base R <code><a href="https://rdrr.io/r/utils/modifyList.html" class="external-link">modifyList()</a></code> in <code><a href="../reference/use_rstudio_secondary_repo.html">use_rstudio_secondary_repo()</a></code>. This replacement also fixed removal of the old repo name when its URL is reassigned to a new name, instead of leaving it as an empty entry.</p></li>
 <li><p>Fixed error when removing a non-existent secondary repo with <code>use_rstudio_secondary_repo(repo_name = NULL)</code>.</p></li>
+<li><p>Fixed error in <code><a href="../reference/repo_string_as_named_list.html">repo_string_as_named_list()</a></code> when the last repository URL value is absent or empty.</p></li>
 <li><p><code><a href="../reference/use_rstudio_keyboard_shortcut.html">use_rstudio_keyboard_shortcut()</a></code> no longer creates the <code>keybindings</code> directory when not needed, and no longer creates empty <code>editor_bindings.json</code> and <code>rstudio_bindings.json</code> files (<a href="https://github.com/vdwulp/rstudio.prefs/issues/30" class="external-link">#30</a>).</p></li>
 <li><p>Fixed documentation errors in <code><a href="../reference/check_min_rstudio_version.html">check_min_rstudio_version()</a></code>, and typos in <code>backup_file()</code> and <code>is_windows()</code>.</p></li>
 </ul></div>
@@ -69,7 +70,7 @@
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.2.0" id="rstudioprefs-020">rstudio.prefs 0.2.0<a class="anchor" aria-label="anchor" href="#rstudioprefs-020"></a></h2><p class="text-muted">CRAN release: 2026-08-20</p>
 <div class="section level4">
-<h4 id="new-0-2-0">New<a class="anchor" aria-label="anchor" href="#new-0-2-0"></a></h4>
+<h4 id="enhancements-0-2-0">Enhancements<a class="anchor" aria-label="anchor" href="#enhancements-0-2-0"></a></h4>
 <ul><li>
 <code><a href="../reference/use_rstudio_keyboard_shortcut.html">use_rstudio_keyboard_shortcut()</a></code> now supports shortcut removal by passing <code>NULL</code> as the value (<a href="https://github.com/vdwulp/rstudio.prefs/issues/22" class="external-link">#22</a>).</li>
 </ul></div>
