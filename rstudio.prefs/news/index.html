@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">rstudio.prefs</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,9 +32,9 @@
     </div>
 
     <div class="section level2">
-<h2 class="pkg-version" data-toc-text="development version" id="rstudioprefs-development-version">rstudio.prefs (development version)<a class="anchor" aria-label="anchor" href="#rstudioprefs-development-version"></a></h2>
+<h2 class="pkg-version" data-toc-text="0.3.0" id="rstudioprefs-030">rstudio.prefs 0.3.0<a class="anchor" aria-label="anchor" href="#rstudioprefs-030"></a></h2>
 <div class="section level4">
-<h4 id="enhancements-development-version">Enhancements<a class="anchor" aria-label="anchor" href="#enhancements-development-version"></a></h4>
+<h4 id="enhancements-0-3-0">Enhancements<a class="anchor" aria-label="anchor" href="#enhancements-0-3-0"></a></h4>
 <ul><li>
 <p><code><a href="../reference/use_rstudio_prefs.html">use_rstudio_prefs()</a></code> now supports array preferences via a list of strings (<a href="https://github.com/vdwulp/rstudio.prefs/issues/28" class="external-link">#28</a>). For example: <code>use_rstudio_prefs(busy_exclusion_list = list("tmux", "screen"))</code>. Character vectors are also accepted for convenience.</p>
 <p>Current array preferences:</p>
@@ -52,7 +52,7 @@
 <li><p><code>use_rstudio_keyboard_shortcut(.write_json = FALSE)</code> now also returns the current shortcuts when called without updates, and no longer asks for confirmation (<a href="https://github.com/vdwulp/rstudio.prefs/issues/30" class="external-link">#30</a>).</p></li>
 </ul></div>
 <div class="section level4">
-<h4 id="fixes-development-version">Fixes<a class="anchor" aria-label="anchor" href="#fixes-development-version"></a></h4>
+<h4 id="fixes-0-3-0">Fixes<a class="anchor" aria-label="anchor" href="#fixes-0-3-0"></a></h4>
 <ul><li><p><code><a href="../reference/use_rstudio_prefs.html">use_rstudio_prefs()</a></code> now prevents errors from <code><a href="https://rstudio.github.io/rstudioapi/reference/writeRStudioPreference.html" class="external-link">rstudioapi::writeRStudioPreference()</a></code>, while continuing with other preferences. Preferences with invalid types are skipped, numeric values are converted to the correct type where applicable (<a href="https://github.com/vdwulp/rstudio.prefs/issues/31" class="external-link">#31</a>).</p></li>
 <li><p>Replaced deprecated <code><a href="https://purrr.tidyverse.org/reference/update_list.html" class="external-link">purrr::update_list()</a></code> with base R <code><a href="https://rdrr.io/r/utils/modifyList.html" class="external-link">modifyList()</a></code> in <code><a href="../reference/use_rstudio_secondary_repo.html">use_rstudio_secondary_repo()</a></code>. This replacement also fixed removal of the old repo name when its URL is reassigned to a new name, instead of leaving it as an empty entry.</p></li>
 <li><p>Fixed error when removing a non-existent secondary repo with <code>use_rstudio_secondary_repo(repo_name = NULL)</code>.</p></li>
@@ -61,7 +61,7 @@
 <li><p>Fixed documentation errors in <code><a href="../reference/check_min_rstudio_version.html">check_min_rstudio_version()</a></code>, and typos in <code>backup_file()</code> and <code>is_windows()</code>.</p></li>
 </ul></div>
 <div class="section level4">
-<h4 id="other-development-version">Other<a class="anchor" aria-label="anchor" href="#other-development-version"></a></h4>
+<h4 id="other-0-3-0">Other<a class="anchor" aria-label="anchor" href="#other-0-3-0"></a></h4>
 <ul><li><p>Reorganized source files to bundle related functions and better reflect their contents.</p></li>
 <li><p>Aligned test files to source files, and expanded test coverage.</p></li>
 <li><p>Added package logo.</p></li>

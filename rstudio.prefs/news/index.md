@@ -1,6 +1,6 @@
 # Changelog
 
-## rstudio.prefs (development version)
+## rstudio.prefs 0.3.0
 
 #### Enhancements
 
