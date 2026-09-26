@@ -2,6 +2,8 @@
 
 ## rstudio.prefs 0.3.0
 
+CRAN release: 2026-09-26
+
 #### Enhancements
 
 - [`use_rstudio_prefs()`](https://vdwulp.github.io/rstudio.prefs/reference/use_rstudio_prefs.md)
