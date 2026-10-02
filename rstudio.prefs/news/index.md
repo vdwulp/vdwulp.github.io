@@ -1,5 +1,17 @@
 # Changelog
 
+## rstudio.prefs (development version)
+
+#### Other
+
+- Updated
+  [`make_path_norm()`](https://vdwulp.github.io/rstudio.prefs/reference/make_path_norm.md)
+  documentation.
+
+- Added [Umami](https://umami.is/) statistics to all pkgdown webpages.
+
+- Addressed some linting suggestions.
+
 ## rstudio.prefs 0.3.0
 
 CRAN release: 2026-09-26
@@ -191,6 +203,7 @@ CRAN release: 2021-09-20
 - Updated documentation for
   [`use_rstudio_secondary_repo()`](https://vdwulp.github.io/rstudio.prefs/reference/use_rstudio_secondary_repo.md)
   to indicate when the country will be set to US.
+  ([\#6](https://github.com/vdwulp/rstudio.prefs/issues/6))
 
 ## rstudio.prefs 0.1.5
 

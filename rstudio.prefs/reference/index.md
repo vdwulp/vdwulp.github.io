@@ -17,7 +17,7 @@
 ## RStudio Add-ins
 
 - [`make_path_norm()`](https://vdwulp.github.io/rstudio.prefs/reference/make_path_norm.md)
-  : Normalize Path Add-in
+  : Normalize Path RStudio Addin
 
 ## Utilities
 

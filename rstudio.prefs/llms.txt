@@ -25,7 +25,7 @@ Install the development version of {rstudio.prefs} from
 
 ``` r
 
-# install.packages('devtools')
+# install.packages("devtools")
 devtools::install_github("vdwulp/rstudio.prefs")
 ```
 
@@ -128,7 +128,7 @@ Sjoberg](https://github.com/ddsjoberg). Maintenance was transferred to
 ## RStudio Add-ins
 
 - [`make_path_norm()`](https://vdwulp.github.io/rstudio.prefs/reference/make_path_norm.md)
-  : Normalize Path Add-in
+  : Normalize Path RStudio Addin
 
 ## Utilities
 
