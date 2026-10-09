@@ -8,7 +8,9 @@
   [`make_path_norm()`](https://vdwulp.github.io/rstudio.prefs/reference/make_path_norm.md)
   documentation.
 
-- Added [Umami](https://umami.is/) statistics to all pkgdown webpages.
+- Added [Umami](https://umami.is/) statistics and [GitHub
+  Sponsors](https://github.com/sponsors/vdwulp) button to all pkgdown
+  webpages.
 
 - Addressed some linting suggestions.
 
