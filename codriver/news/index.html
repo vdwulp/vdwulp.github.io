@@ -46,7 +46,8 @@
 <h2 class="pkg-version" data-toc-text="development version" id="codriver-development-version">codriver (development version)<a class="anchor" aria-label="anchor" href="#codriver-development-version"></a></h2>
 <div class="section level4">
 <h4 id="enhancements-development-version">Enhancements<a class="anchor" aria-label="anchor" href="#enhancements-development-version"></a></h4>
-<ul><li>New function <code><a href="../reference/codriver_info.html">codriver::codriver_info()</a></code> prints the codriver version, active configuration, R/RStudio environment details, and token usage for the active ellmer session.</li>
+<ul><li><p>LLM prompts now report packages currently attached in the active R session and available for unqualified use. This replaces reporting <code><a href="https://rdrr.io/r/base/library.html" class="external-link">library()</a></code> calls found above the cursor, which may not have been executed, and gives the LLM a more accurate signal about the packages available to generated code.</p></li>
+<li><p>New function <code><a href="../reference/codriver_info.html">codriver::codriver_info()</a></code> prints the codriver version, active configuration, R/RStudio environment details, and token usage for the active ellmer session.</p></li>
 </ul></div>
 <div class="section level4">
 <h4 id="other-development-version">Other<a class="anchor" aria-label="anchor" href="#other-development-version"></a></h4>

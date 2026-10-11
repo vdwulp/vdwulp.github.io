@@ -4,6 +4,12 @@
 
 #### Enhancements
 
+- LLM prompts now report packages currently attached in the active R
+  session and available for unqualified use. This replaces reporting
+  [`library()`](https://rdrr.io/r/base/library.html) calls found above
+  the cursor, which may not have been executed, and gives the LLM a more
+  accurate signal about the packages available to generated code.
+
 - New function
   [`codriver::codriver_info()`](https://vdwulp.github.io/codriver/reference/codriver_info.md)
   prints the codriver version, active configuration, R/RStudio
