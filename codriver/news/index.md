@@ -2,8 +2,19 @@
 
 ## codriver (development version)
 
+#### Enhancements
+
+- New function
+  [`codriver::codriver_info()`](https://vdwulp.github.io/codriver/reference/codriver_info.md)
+  prints the codriver version, active configuration, R/RStudio
+  environment details, and token usage for the active ellmer session.
+
+#### Other
+
 - Increased test coverage to 100%.
+
 - Documentation updates:
+
   - New article [Free API
     access](https://vdwulp.github.io/codriver/articles/free-api-access.html),
   - Edited articles [Getting

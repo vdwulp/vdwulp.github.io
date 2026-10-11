@@ -30,3 +30,11 @@ for an overview of modes and result presentation.
 
 - [`codriver()`](https://vdwulp.github.io/codriver/reference/codriver.md)
   : Context-aware AI assistant for RStudio
+
+## Diagnostics
+
+Display the active codriver configuration, package and R/RStudio
+environment details, and token usage for the active ellmer session.
+
+- [`codriver_info()`](https://vdwulp.github.io/codriver/reference/codriver_info.md)
+  : Print codriver diagnostic information
