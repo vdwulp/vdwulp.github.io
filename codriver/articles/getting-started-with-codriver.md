@@ -2,13 +2,13 @@
 
 To use codriver you need access to a **large language model (LLM)**,
 either through a cloud provider like OpenAI or Anthropic, a model
-running on your own machine, or a proxy provided by your organisation.
+running on your own machine, or a proxy provided by your organization.
 Codriver supports a wide range of providers by building on the [ellmer
 package](https://ellmer.tidyverse.org).
 
 This article explains how to connect codriver to your provider. It
 assumes you already have access to one, meaning you have signed up,
-obtained an API key, or been given credentials by your organisation. If
+obtained an API key, or been given credentials by your organization. If
 you don’t have access yet, see [**Free API
 access**](https://vdwulp.github.io/codriver/articles/free-api-access.html)
 for options that are free to start with.
@@ -79,7 +79,7 @@ avoids this.
 ## Authenticating
 
 Before codriver can send requests to an LLM, it needs to prove to the
-provider that you are authorised to use it. How this works depends on
+provider that you are authorized to use it. How this works depends on
 the provider.
 
 The most common approach is an **API key**: a secret string that you
@@ -139,14 +139,14 @@ in your RStudio workflow.
 
 ## OpenAI-compatible endpoint
 
-Many organisations run their own LLM infrastructure that speaks the
+Many organizations run their own LLM infrastructure that speaks the
 OpenAI API format. This includes local model servers, university
 research clusters, and company proxies. For these, use
 `"openai_compatible"` as the provider name.
 
 Unlike named providers, an OpenAI-compatible endpoint has no defaults.
 You will need to know the **base URL** and **model name** from your
-organisation’s documentation or administrator.
+organization’s documentation or administrator.
 
 By default, `"openai_compatible"` reads the API key from the environment
 variable `OPENAI_API_KEY`. If you want to keep it separate from an
@@ -164,14 +164,14 @@ codriver::codriver_configure(
 ```
 
 > *Note: older ellmer documentation may show an `api_key` argument -
-> this is deprecated in favour of `credentials` in combination with an
+> this is deprecated in favor of `credentials` in combination with an
 > environment variable, which avoids hardcoding keys in your code.*
 
 ------------------------------------------------------------------------
 
 ## Microsoft Azure OpenAI
 
-Another service regularly used by organisations is `"azure_openai"`. For
+Another service regularly used by organizations is `"azure_openai"`. For
 this provider, you always need the **endpoint** of your Azure resource.
 In addition, authentication is handled in one of three ways. Your IT
 team can tell you which authentication method applies and what values to
