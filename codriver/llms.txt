@@ -124,6 +124,15 @@ usage, run
 codriver::codriver_info()
 ```
 
+To inspect the system prompt, user prompt, and raw assistant response
+from the most recent codriver request, run
+[`codriver_last_chat()`](https://vdwulp.github.io/codriver/reference/codriver_last_chat.html):
+
+``` r
+
+codriver::codriver_last_chat()
+```
+
 ## 📄 License
 
 MIT License, see
@@ -165,11 +174,13 @@ for an overview of modes and result presentation.
 
 ## Diagnostics
 
-Display the active codriver configuration, package and R/RStudio
-environment details, and token usage for the active ellmer session.
+Inspect codriver’s configuration and environment, or review the prompts
+and raw response from the most recent chat.
 
 - [`codriver_info()`](https://vdwulp.github.io/codriver/reference/codriver_info.md)
-  : Print codriver diagnostic information
+  : Collect codriver diagnostic information
+- [`codriver_last_chat()`](https://vdwulp.github.io/codriver/reference/codriver_last_chat.md)
+  : Inspect the most recent chat
 
 # Articles
 

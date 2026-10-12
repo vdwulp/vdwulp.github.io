@@ -124,6 +124,15 @@ usage, run
 codriver::codriver_info()
 ```
 
+To inspect the system prompt, user prompt, and raw assistant response
+from the most recent codriver request, run
+[`codriver_last_chat()`](https://vdwulp.github.io/codriver/reference/codriver_last_chat.html):
+
+``` r
+
+codriver::codriver_last_chat()
+```
+
 ## 📄 License
 
 MIT License, see
