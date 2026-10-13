@@ -57,7 +57,9 @@ strongly recommended but can be skipped or changed later via `Tools` \>
 
 ``` r
 if (FALSE) { # \dontrun{
-  codriver_configure("openai", model = "gpt-4o")
-  codriver_configure("openai_compatible/mistral", base_url = "http://localhost:1234/v1")
+  codriver_configure("openai",
+                     model = "gpt-4o")
+  codriver_configure("openai_compatible/mistral",
+                     base_url = "http://localhost:1234/v1")
 } # }
 ```

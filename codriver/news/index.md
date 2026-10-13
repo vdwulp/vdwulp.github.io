@@ -39,6 +39,8 @@
   - Expanded package reference index,
   - Added automated spell checking.
 
+- Addressed some linting suggestions.
+
 ## codriver 1.0.0
 
 CRAN release: 2026-08-08
