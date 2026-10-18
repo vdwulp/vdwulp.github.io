@@ -2,6 +2,8 @@
 
 ## codriver 1.1.0
 
+CRAN release: 2026-10-18
+
 #### Enhancements
 
 - LLM prompts now report packages currently attached in the active R
