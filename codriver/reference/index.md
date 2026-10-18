@@ -34,9 +34,9 @@ for an overview of modes and result presentation.
 ## Diagnostics
 
 Inspect codriver’s configuration and environment, or review the prompts
-and raw response from the most recent chat.
+and raw response from the most recent request.
 
 - [`codriver_info()`](https://vdwulp.github.io/codriver/reference/codriver_info.md)
   : Collect codriver diagnostic information
-- [`codriver_last_chat()`](https://vdwulp.github.io/codriver/reference/codriver_last_chat.md)
-  : Inspect the most recent chat
+- [`codriver_last_request()`](https://vdwulp.github.io/codriver/reference/codriver_last_request.md)
+  : Inspect the most recent codriver request
