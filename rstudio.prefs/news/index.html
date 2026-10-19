@@ -39,6 +39,11 @@
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="development version" id="rstudioprefs-development-version">rstudio.prefs (development version)<a class="anchor" aria-label="anchor" href="#rstudioprefs-development-version"></a></h2>
 <div class="section level4">
+<h4 id="fixes-development-version">Fixes<a class="anchor" aria-label="anchor" href="#fixes-development-version"></a></h4>
+<ul><li>
+<code><a href="../reference/use_rstudio_keyboard_shortcut.html">use_rstudio_keyboard_shortcut()</a></code> now ignores empty bindings left after removal via RStudio menus, removing unnecessary blank “No Changes” output, without changing correct shortcut registration. Empty bindings are omitted when <code>addins.json</code> is updated.</li>
+</ul></div>
+<div class="section level4">
 <h4 id="other-development-version">Other<a class="anchor" aria-label="anchor" href="#other-development-version"></a></h4>
 <ul><li><p>Updated <code><a href="../reference/make_path_norm.html">make_path_norm()</a></code> documentation.</p></li>
 <li><p>Added <a href="https://umami.is/" class="external-link">Umami</a> statistics and <a href="https://github.com/sponsors/vdwulp" class="external-link">GitHub Sponsors</a> button to all pkgdown webpages.</p></li>

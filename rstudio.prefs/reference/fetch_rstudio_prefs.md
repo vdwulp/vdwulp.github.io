@@ -25,7 +25,7 @@ are currently not supported and are ignored.
 fetch_rstudio_prefs()
 #> ✔ Downloading list of available RStudio settings
 #> 
-#> # A tibble: 301 × 6
+#> # A tibble: 307 × 6
 #>    property                      description       type  default class is_scalar
 #>    <chr>                         <chr>             <chr> <chr>   <chr> <lgl>    
 #>  1 air_formatter_require_toml    When set, Air wi… bool… false   logi… TRUE     
@@ -38,5 +38,5 @@ fetch_rstudio_prefs()
 #>  8 assistant                     Select which AI … stri… posit   char… TRUE     
 #>  9 assistant_completions_delay   The delay (in mi… inte… 300     inte… TRUE     
 #> 10 assistant_completions_trigger Control when cod… stri… auto    char… TRUE     
-#> # ℹ 291 more rows
+#> # ℹ 297 more rows
 ```
